@@ -24,9 +24,11 @@
 
 `docker`{{execute}} ★
 
-`docker -v`{{execute}} ★
+`docker -v`{{execute}}
 
 `docker version`{{execute}} ★
+
+`ps -ef  | grep dockerd`{{execute}}
 
 [Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
 
