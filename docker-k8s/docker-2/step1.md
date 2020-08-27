@@ -28,16 +28,6 @@ https://hub.docker.com ★
 
 ## 이미지 받기 pull #2
 
-`docker images`{{execute}}
-
-`docker pull centos:latest`{{execute}}
-
-`docker pull centos:8`{{execute}}
-
-`docker pull centos:7`{{execute}}
-
-## 이미지 받기 pull #3
-
 `docker pull alpine:latest`{{execute}}
 
 `docker pull alpine:3`{{execute}}
