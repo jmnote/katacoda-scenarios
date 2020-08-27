@@ -1,10 +1,10 @@
 Docker 이미지를 다뤄봅시다.
 
-## 정리하기
+## 모든 이미지 삭제하기
 
-`docker system prune`{{execute}} ★
+`docker rmi -f $(docker images -aq)`{{execute}}
 
-`docker system prune -f`{{execute}}
+`docker images`{{execute}}
 
 ## 이미지 찾기
 
