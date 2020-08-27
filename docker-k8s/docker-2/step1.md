@@ -58,7 +58,7 @@ https://hub.docker.com ★
 
 `docker images | grep alpine`{{execute}}
 
-`docker rmi alpine:3.10`{{execute}}
+`docker rmi alpine:3.10`{{execute}} ★
 
 `docker rmi f70734b6a266`{{execute}}
 
@@ -80,4 +80,4 @@ https://hub.docker.com ★
 
 `echo $(docker images -aq)`{{execute}}
 
-`docker rmi -f $(docker images -aq)`{{execute}} ★
+`docker rmi -f $(docker images -aq)`{{execute}}
