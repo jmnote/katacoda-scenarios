@@ -78,6 +78,6 @@ https://hub.docker.com ★
 
 ## 과제
 
-centos 7.7 버전을 찾고 받고 지워봅시다.
+docker hub에서 centos 7.7 버전 이미지를 찾아서 받고(pull) 지워봅시다(rmi).
 
 `for i in {180..0}; do echo $i; sleep 1; done`{{execute}}
