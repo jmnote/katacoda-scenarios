@@ -1,41 +1,37 @@
-먼저 실습환경을 확인봅시다.
+Docker 이미지를 다뤄봅시다.
 
-## 나는 누구? 여긴 어디?
+## 정리하기
 
-`whoami`{{execute}}
+`docker system prune`{{execute}}
 
-`hostname`{{execute}}
+`docker system prune -f`{{execute}}
 
-`pwd`{{execute}}
+## 이미지 찾기
 
-`PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\\$ "`{{execute}}
+`docker search centos`{{execute}}
 
-## OS가 뭔가요?
+https://hub.docker.com ★
 
-`cat /etc/os-release`{{execute}}
+## 이미지 받기
 
-`uname`{{execute}}
+`docker images`{{execute}}
 
-`uname -a`{{execute}}
+`docker pull centos`{{execute}} ★
 
-`uname -r`{{execute}}
+`docker pull debian`{{execute}}
 
-## Docker가 뭔가요?
+`docker pull ubuntu`{{execute}}
 
-`docker`{{execute}} ★
+`docker pull alpine`{{execute}}
 
-`docker -v`{{execute}}
+## 이미지 원하는 버전 받기
 
-`docker version`{{execute}} ★
+`docker images`{{execute}}
 
-`ps -ef  | grep dockerd`{{execute}}
+`docker pull centos:latest`{{execute}}
 
-[Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
+`docker pull centos:9`{{execute}}
 
-## Katacoda가 뭔가요?
+`docker pull centos:8`{{execute}}
 
-`echo hello > world.txt`{{execute}}
-
-`cat world.txt`{{execute}}
-
-
+`docker pull centos:7`{{execute}}
