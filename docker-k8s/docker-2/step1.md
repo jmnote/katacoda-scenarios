@@ -24,7 +24,7 @@
 
 `docker`{{execute}} ★
 
-`docker -v`{{execute}} ★
+`docker -v`{{execute}}
 
 `docker version`{{execute}} ★
 
