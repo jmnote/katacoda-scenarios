@@ -22,11 +22,11 @@
 
 ## Docker가 뭔가요?
 
-`docker`{{execute}}
+`docker`{{execute}} ★
 
-`docker -v`{{execute}}
+`docker -v`{{execute}} ★
 
-`docker version`{{execute}}
+`docker version`{{execute}} ★
 
 [Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
 
