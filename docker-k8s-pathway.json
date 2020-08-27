@@ -5,7 +5,12 @@
     {
       "course_id": "docker-1",
       "title": "Docker Training 1",
-      "description": "Docker Training Environment"
+      "description": "docker version"
+    },
+    {
+      "course_id": "docker-2",
+      "title": "Docker Training 1",
+      "description": "docker pull"
     },
     {
       "course_id": "docker1",
