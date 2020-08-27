@@ -75,3 +75,7 @@ https://hub.docker.com ★
 `echo $(docker images -aq)`{{execute}}
 
 `docker rmi -f $(docker images -aq)`{{execute}}
+
+## 
+
+centos 7.7 버전을 찾아서 받아보고 지워봅시다.
