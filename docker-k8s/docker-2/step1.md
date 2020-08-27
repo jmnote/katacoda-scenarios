@@ -28,6 +28,8 @@
 
 `docker version`{{execute}} ★
 
+`ps -ef  | grep dockerd`{{execute}}
+
 [Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
 
 ## Katacoda가 뭔가요?
