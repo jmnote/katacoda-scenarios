@@ -6,13 +6,13 @@ Docker 이미지를 다뤄봅시다.
 
 `docker images`{{execute}}
 
-## 이미지 찾기
+## 이미지 찾기 search
 
 `docker search centos`{{execute}}
 
 https://hub.docker.com ★
 
-## 이미지 받기
+## 이미지 받기 pull #1
 
 `docker images`{{execute}} ★
 
@@ -24,7 +24,7 @@ https://hub.docker.com ★
 
 `docker pull alpine`{{execute}}
 
-## centos 이미지 받기
+## 이미지 받기 pull #2
 
 `docker images`{{execute}}
 
@@ -50,7 +50,7 @@ https://hub.docker.com ★
 
 `docker pull alpine:3.9`{{execute}}
 
-## 이미지 삭제하기
+## 이미지 삭제하기 rmi
 
 `docker images`{{execute}}
 
