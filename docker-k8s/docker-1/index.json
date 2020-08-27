@@ -6,7 +6,7 @@
   "details": {
     "steps": [
       {
-        "title": "Docker Image Pull",
+        "title": "Docker Training Environment",
         "text": "step1.md"
       }
     ],
