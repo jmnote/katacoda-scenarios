@@ -36,7 +36,7 @@ https://hub.docker.com ★
 
 `docker pull centos:7`{{execute}}
 
-## alpine 이미지 받기
+## 이미지 받기 pull #3
 
 `docker pull alpine:latest`{{execute}}
 
