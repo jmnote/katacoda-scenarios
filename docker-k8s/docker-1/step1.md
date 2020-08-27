@@ -29,3 +29,11 @@
 `docker version`{{execute}}
 
 [Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
+
+## Katacoda가 뭔가요?
+
+`echo hello > world.txt`{{execute}}
+
+`cat world.txt`{{execute}}
+
+
