@@ -16,7 +16,7 @@ https://hub.docker.com ★
 
 `docker images`{{execute}} ★
 
-`docker pull centos`{{execute}}
+`docker pull centos`{{execute}} ★
 
 `docker pull debian`{{execute}}
 
