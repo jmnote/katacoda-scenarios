@@ -28,4 +28,4 @@
 
 `docker version`{{execute}}
 
-https://en.wikipedia.org/wiki/Docker_(software)
+[Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
