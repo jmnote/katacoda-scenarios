@@ -28,6 +28,8 @@ https://hub.docker.com ★
 
 ## 이미지 받기 pull #2
 
+`docker images`{{execute}}
+
 `docker pull alpine:latest`{{execute}}
 
 `docker pull alpine:3`{{execute}}
