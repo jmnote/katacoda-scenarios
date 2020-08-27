@@ -76,6 +76,6 @@ https://hub.docker.com ★
 
 `docker rmi -f $(docker images -aq)`{{execute}}
 
-## 
+## 과제
 
 centos 7.7 버전을 찾고 받고 지워봅시다.
