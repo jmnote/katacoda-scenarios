@@ -78,4 +78,4 @@ https://hub.docker.com ★
 
 ## 
 
-centos 7.7 버전을 찾아서 받아보고 지워봅시다.
+centos 7.7 버전을 찾고 받고 지워봅시다.
