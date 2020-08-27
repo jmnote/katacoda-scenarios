@@ -1,11 +1,11 @@
 {
-  "title": "도커 & k8s 실습",
-  "description": "katacoda를 통한 도커 & k8s 실습",
+  "title": "Docker & K8s Training",
+  "description": "Docker & K8s Training with Katacoda",
   "courses": [
     {
       "course_id": "docker-1",
-      "title": "도커 실습 1",
-      "description": "실습환경 확인"
+      "title": "Docker Training 1",
+      "description": "Docker Training Environment"
     },
     {
       "course_id": "docker1",
