@@ -24,6 +24,8 @@ https://hub.docker.com ★
 
 `docker pull alpine`{{execute}}
 
+`docker pull scratch`{{execute}}
+
 ## 이미지 받기 pull #2
 
 `docker images`{{execute}}
