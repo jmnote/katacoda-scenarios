@@ -8,6 +8,7 @@
       {
         "title": "Docker Training Environment",
         "courseData": "courseData.sh",
+        "code": "code.sh",
         "text": "step1.md"
       }
     ]
@@ -15,8 +16,8 @@
   "environment": {
     "uilayout": "terminal",
     "terminals": [
-            {"name": "Terminal 1", "target": "host01"}
-        ]
+      {"name": "Terminal 1", "target": "host01"}
+    ]
   },
   "backend": {
     "imageid": "ubuntu"
