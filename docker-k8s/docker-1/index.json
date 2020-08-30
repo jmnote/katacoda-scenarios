@@ -7,7 +7,7 @@
     "steps": [
       {
         "title": "Docker Training Environment",
-        "courseData": "courseData.sh"
+        "courseData": "courseData.sh",
         "text": "step1.md"
       }
     ]
