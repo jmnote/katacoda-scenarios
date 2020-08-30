@@ -76,8 +76,8 @@ https://hub.docker.com ★
 
 `docker rmi -f $(docker images -aq)`{{execute}}
 
-## 과제
+## 과제 (2분)
 
 docker hub에서 centos 7.7 버전 이미지를 찾아서 받고(pull) 조회하고(images) 지워봅시다(rmi).
 
-`for i in {180..0}; do echo $i; sleep 1; done`{{execute}}
+`for i in {120..0}; do echo -n $i...; sleep 1; done`{{execute}}
