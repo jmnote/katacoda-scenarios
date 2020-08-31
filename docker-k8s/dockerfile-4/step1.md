@@ -1,25 +1,16 @@
-## 모든 이미지 제거
-
-`docker rmi -f $(docker images -aq)`{{execute}}
+<br>
 
 
-## tag
+## HelloNode
 
-`docker pull alpine:3.11`{{execute}}
+`cd /root/04_HelloNode`{{execute}}
 
-`docker images alpine`{{execute}}
+`ll`{{execute}}
 
-`docker tag alpine:3.11 jmnote/myimage:v1`{{execute}}
-
-`docker images | egrep 'alpine|myimage'`{{execute}}
-
-
-## build
-
-`echo FROM alpine:3.11 > Dockerfile`{{execute}}
+`cat app.js`{{execute}}
 
 `cat Dockerfile`{{execute}}
 
-`docker build -t jmnote/myimage:v2 .`{{execute}}
+`docker build -t HelloNode .`{{execute}}
 
-`docker images | egrep 'alpine|myimage'`{{execute}}
+`docker run -d --name HelloNode -p 80:3000 HelloNode`{{execute}}
