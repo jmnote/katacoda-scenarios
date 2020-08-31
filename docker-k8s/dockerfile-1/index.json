@@ -1,12 +1,12 @@
 {
-  "title": "Docker Training 1",
-  "description": "Docker Training Environment",
+  "title": "dockerfile-1",
+  "description": "dockerfile-1",
   "difficulty": "Beginner",
   "time": "5 minutes",
   "details": {
     "steps": [
       {
-        "title": "Docker Training Environment",
+        "title": "dockerfile-1",
         "courseData": "courseData.sh",
         "code": "code.sh",
         "text": "step1.md"
