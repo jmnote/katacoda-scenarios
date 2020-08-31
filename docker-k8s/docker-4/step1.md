@@ -1,41 +1,89 @@
-먼저 실습환경을 확인봅시다.
 
-## 나는 누구? 여긴 어디?
+
+## Hello World
+
+`docker run hello-world`{{execute}}
+
+`docker run hello-world`{{execute}}
+
+`docker ps -a`{{execute}}
+
+
+## run -it
+
+`docker run ubuntu`{{execute}}
+
+`docker run -it ubuntu`{{execute}} ★
+
+`exit`{{execute}}
+
+`docker ps -a`{{execute}}
+
+`docker run --help | egrep 'interactive|tty'`{{execute}}
+
+
+## -i vs -t
+
+`docker run -i ubuntu`{{execute}}
 
 `whoami`{{execute}}
 
-`hostname`{{execute}}
+`tty`{{execute}}
 
-`pwd`{{execute}}
+`exit`{{execute}}
 
-`PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\\$ "`{{execute}}
+`docker run -t ubuntu`{{execute}}
 
-## OS가 뭔가요?
+`whoami`{{execute}}
 
-`cat /etc/os-release`{{execute}}
+`tty`{{execute}}
 
-`uname`{{execute}}
+`exit`{{execute}}
 
-`uname -a`{{execute}}
+`^C`{{execute ctrl-seq}}
 
-`uname -r`{{execute}}
+`docker ps`{{execute}}
 
-## Docker가 뭔가요?
-
-`docker`{{execute}} ★
-
-`docker -v`{{execute}}
-
-`docker version`{{execute}} ★
-
-`ps -ef  | grep dockerd`{{execute}}
-
-[Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
-
-## Katacoda가 뭔가요?
-
-`echo hello > world.txt`{{execute}}
-
-`cat world.txt`{{execute}}
+`docker ps -a`{{execute}}
 
 
+## COMMAND 실행
+
+`docker run ubuntu echo hello world`{{execute}}
+
+`docker ps -a`{{execute}}
+
+`docker run --name ubuntu1 ubuntu echo hello world`{{execute}}
+
+`docker ps -a`{{execute}}
+
+`docker start -i ubuntu1`{{execute}}
+
+`docker ps -a`{{execute}}
+
+VM과의 차이점?
+
+
+## 컨테이너 제거
+
+`docker ps -a`{{execute}}
+
+`docker rm 컨테이너ID`{{execute}}
+
+`docker rm -f 컨테이너ID`{{execute}} ★
+
+`docker rm -f 컨테이너이름`{{execute}}
+
+
+
+## 모든 컨테이너 제거
+
+`docker ps -a`{{execute}}
+
+`docker ps -aq`{{execute}}
+
+`echo $(docker ps -aq)`{{execute}}
+
+`docker rm -f $(docker ps -aq)`{{execute}} ★
+
+`docker ps -a`{{execute}}
