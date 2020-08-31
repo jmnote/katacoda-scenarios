@@ -7,6 +7,8 @@
 
 `docker inspect mysql1 | grep IPAddress`{{execute}}
 
+Terminal + `View HTTP port 80 on Host 1`
+
 
 ## link
 
