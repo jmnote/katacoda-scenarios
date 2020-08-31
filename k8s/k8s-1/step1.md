@@ -12,6 +12,8 @@
 
 `kubectl get pods`{{execute}}
 
+`kubectl get pods -n default`{{execute}}
+
 `kubectl get namespaces`{{execute}}
 
 `kubectl get pods -A`{{execute}}
