@@ -1,41 +1,95 @@
-먼저 실습환경을 확인봅시다.
+docker-2
 
-## 나는 누구? 여긴 어디?
+## 모든 이미지 삭제
 
-`whoami`{{execute}}
+`docker images`{{execute}}
 
-`hostname`{{execute}}
+`docker rmi -f $(docker images -aq)`{{execute}}
 
-`pwd`{{execute}}
+`docker images`{{execute}}
 
-`PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\\$ "`{{execute}}
 
-## OS가 뭔가요?
+## 이미지 찾기
 
-`cat /etc/os-release`{{execute}}
+`docker search centos`{{execute}}
 
-`uname`{{execute}}
+https://hub.docker.com ★
 
-`uname -a`{{execute}}
 
-`uname -r`{{execute}}
+## 이미지 받기
 
-## Docker가 뭔가요?
+`docker pull ubuntu`{{execute}} ★
 
-`docker`{{execute}} ★
+이미지의 tag는? 레이어 수는?
 
-`docker -v`{{execute}}
+`docker images`{{execute}}
 
-`docker version`{{execute}} ★
+받은 이미지는 어디에 저장되는가?
+
+docker info | egrep 'Root|Storage'
 
 `ps -ef  | grep dockerd`{{execute}}
 
-[Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
-
-## Katacoda가 뭔가요?
-
-`echo hello > world.txt`{{execute}}
-
-`cat world.txt`{{execute}}
+ll /var/lib/docker/overlay/
 
 
+## 특정버전 받기
+
+`docker images`{{execute}}
+
+`docker pull alpine:latest`{{execute}}
+
+`docker pull alpine:3`{{execute}}
+
+`docker pull alpine:3.12`{{execute}}
+
+`docker pull alpine:3.12.0`{{execute}}
+
+`docker pull alpine:3.11`{{execute}}
+
+`docker pull alpine:3.10`{{execute}}
+
+`docker pull alpine:3.9`{{execute}}
+
+
+## 이미지 삭제
+
+`docker images`{{execute}}
+
+`docker images alpine`{{execute}}
+
+`docker images | grep alpine`{{execute}}
+
+`docker rmi alpine:3.10`{{execute}}
+
+`docker rmi f70734b6a266`{{execute}}
+
+`docker rmi alpine:3.12.0`{{execute}}
+
+`docker rmi a24bb4013296`{{execute}}
+
+`docker rmi a24bb4013296 -f`{{execute}}
+
+
+## 모든 이미지 삭제 2
+
+`docker images`{{execute}}
+
+`docker images -a`{{execute}}
+
+`docker images -q`{{execute}}
+
+`docker images -aq`{{execute}}
+
+`echo $(docker images -aq)`{{execute}}
+
+`docker rmi -f $(docker images -aq)`{{execute}}
+
+`ll /var/lib/docker/overlay/`{{execute}}
+
+
+## 2분 과제
+
+docker hub에서 centos 7.7 버전 이미지를 찾아서 받고(pull) 조회하고(images) 지워봅시다(rmi).
+
+`for i in {120..0}; do echo $i; sleep 1; done`{{execute}}
