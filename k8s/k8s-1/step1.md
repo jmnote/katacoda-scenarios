@@ -32,7 +32,7 @@
 
 <br>
 
-## k8s apiserver
+## k8s apiserver (optional)
 
 `kubectl config view`{{execute}}
 
