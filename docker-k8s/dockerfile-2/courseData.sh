@@ -3,8 +3,8 @@
 ###
 ### 01
 ###
-mkdir /root/01_HelloJava_v1
-cd    /root/01_HelloJava_v1
+mkdir /root/01_HelloJava
+cd    /root/01_HelloJava
 
 cat <<EOF > HelloJava.java
 public class HelloJava {
@@ -25,8 +25,8 @@ EOF
 ###
 ### 02
 ###
-mkdir /root/02_HelloJava_v2
-cd    /root/02_HelloJava_v2
+mkdir /root/02_HelloJava2
+cd    /root/02_HelloJava2
 
 cat <<EOF > HelloJava.java
 public class HelloJava {
