@@ -44,7 +44,7 @@
 
 `tty`{{execute}}
 
-
+<br>
 
 Terminal 1 에서
 
@@ -62,11 +62,13 @@ Terminal 1 에서
 
 `echo "Hello, pts1" > /dev/pts/1`{{execute}}
 
+<br>
 
 나갔다가 들어오면 초기화됩니다.
 
 `CONTINUE` - `NEXT SCENARIO`
 
+<br>
 
 katacoda 세션은 도중에 끊길 수 있습니다.
 
