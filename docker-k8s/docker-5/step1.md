@@ -1,41 +1,83 @@
-먼저 실습환경을 확인봅시다.
+## run
 
-## 나는 누구? 여긴 어디?
+`docker run --name web1 nginx`{{execute}}
 
-`whoami`{{execute}}
+`docker ps -a`{{execute}}
 
-`hostname`{{execute}}
+`^C`{{execute ctrl-seq}}
 
-`pwd`{{execute}}
-
-`PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\\$ "`{{execute}}
-
-## OS가 뭔가요?
-
-`cat /etc/os-release`{{execute}}
-
-`uname`{{execute}}
-
-`uname -a`{{execute}}
-
-`uname -r`{{execute}}
-
-## Docker가 뭔가요?
-
-`docker`{{execute}} ★
-
-`docker -v`{{execute}}
-
-`docker version`{{execute}} ★
-
-`ps -ef  | grep dockerd`{{execute}}
-
-[Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
-
-## Katacoda가 뭔가요?
-
-`echo hello > world.txt`{{execute}}
-
-`cat world.txt`{{execute}}
+`docker rm -f web1`{{execute}}
 
 
+## run -d
+
+`docker run --help | grep detach`{{execute}}
+
+`docker run -d --name web2 nginx`{{execute}}
+
+`docker exec -it web2 bash`{{execute}}
+
+`curl localhost`{{execute}}
+
+`exit`{{execute}}
+
+`netstat -tnlp`{{execute}}
+
+`docker rm -f $(docker ps -aq)`{{execute}}
+
+
+## run -p
+
+`docker run --help | grep publish`{{execute}}
+
+`docker run -d -p 8081:80 --name web1 nginx`{{execute}}
+
+`docker run -d -p 8082:80 --name web2 nginx`{{execute}}
+
+`docker run -d -P --name web3 nginx`{{execute}}
+
+`docker ps -a`{{execute}}
+
+`netstat -tnlp`{{execute}}
+
+`curl localhost:8081`{{execute}}
+
+`curl localhost:8082`{{execute}}
+
+`curl localhost:포트번호`{{execute}}
+
+`docker logs web3`{{execute}}
+
+`docker logs web3 -f`{{execute}}
+
+`curl localhost:8081/asdf`{{execute}}
+
+
+# run --rm
+
+`docker rm -f $(docker ps -aq)`{{execute}}
+
+`docker ps -a`{{execute}}
+
+`docker run --rm nginx cat /etc/nginx/conf.d/default.conf`{{execute}}
+
+`docker ps -a`{{execute}}
+
+
+# run -v 파일
+
+`echo hello nginx > index.html`{{execute}}
+
+`cat index.html`{{execute}}
+
+`docker run -d --name web1 -p 8081:80 -v `pwd`/index.html:/usr/share/nginx/html/index.html nginx`{{execute}}
+
+`docker ps -a`{{execute}}
+
+`curl localhost:8081`{{execute}}
+
+`docker logs web1`{{execute}}
+
+`ll /var/lib/docker/containers/*/*.log`{{execute}}
+
+`cat /var/lib/docker/containers/*/*.log`{{execute}}
