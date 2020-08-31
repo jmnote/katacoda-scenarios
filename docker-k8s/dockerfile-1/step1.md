@@ -1,41 +1,25 @@
-먼저 실습환경을 확인봅시다.
+## 모든 이미지 제거
 
-## 나는 누구? 여긴 어디?
-
-`whoami`{{execute}}
-
-`hostname`{{execute}}
-
-`pwd`{{execute}}
-
-`PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\\$ "`{{execute}}
-
-## OS가 뭔가요?
-
-`cat /etc/os-release`{{execute}}
-
-`uname`{{execute}}
-
-`uname -a`{{execute}}
-
-`uname -r`{{execute}}
-
-## Docker가 뭔가요?
-
-`docker`{{execute}} ★
-
-`docker -v`{{execute}}
-
-`docker version`{{execute}} ★
-
-`ps -ef  | grep dockerd`{{execute}}
-
-[Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
-
-## Katacoda가 뭔가요?
-
-`echo hello > world.txt`{{execute}}
-
-`cat world.txt`{{execute}}
+`docker rmi $(docker images -aq)`{{execute}}
 
 
+## tag
+
+`docker pull alpine:3.11`{{execute}}
+
+`docker images alpine`{{execute}}
+
+`docker tag alpine:3.11 jmnote/myimage:v1`{{execute}}
+
+`docker images | egrep 'alpine|myimage'`{{execute}}
+
+
+## build
+
+`echo FROM alpine:3.11 > Dockerfile`{{execute}}
+
+`cat Dockerfile`{{execute}}
+
+`docker build -t jmnote/myimage:v2 .`{{execute}}
+
+`docker images | egrep 'alpine|myimage'`{{execute}}
