@@ -1,6 +1,6 @@
 ## 모든 이미지 제거
 
-`docker rmi $(docker images -aq)`{{execute}}
+`docker rmi -f $(docker images -aq)`{{execute}}
 
 
 ## tag
