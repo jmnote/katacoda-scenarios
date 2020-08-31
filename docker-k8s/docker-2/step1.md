@@ -29,3 +29,5 @@
 `docker build -t HelloJava:v2 .`{{execute}}
 
 `docker run HelloJava:v2`{{execute}}
+
+`docker images`{{execute}}
