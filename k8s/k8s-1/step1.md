@@ -18,6 +18,10 @@
 
 ## kubeconfig (optional)
 
+`which launch.sh`{{execute}}
+
+`cat /usr/bin/launch.sh`{{execute}}
+
 `cat ~/.kube/config`{{execute}}
 
 `mv ~/.kube/config .`{{execute}}
