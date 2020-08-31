@@ -15,6 +15,10 @@
   },
   "environment": {
     "uilayout": "terminal"
+    "terminals": [
+      {"name": "master", "target": "host01"},
+      {"name": "node01", "target": "host02"}
+    ]
   },
   "backend": {
     "imageid": "kubernetes-cluster-running:1.18"
