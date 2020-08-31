@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#!/bin/bash
+
 ###
 ### 01
 ###
@@ -14,8 +16,8 @@ EOF
 ###
 ### 02
 ###
-mkdir /root/02_HelloJava
-cd    /root/02_HelloJava
+mkdir /root/02-1_HelloJava
+cd    /root/02-1_HelloJava
 
 cat <<EOF > HelloJava.java
 public class HelloJava {
@@ -33,11 +35,8 @@ RUN javac HelloJava.java
 CMD ["java","HelloJava"]
 EOF
 
-###
-### 03
-###
-mkdir /root/03_HelloJava2
-cd    /root/03_HelloJava2
+mkdir /root/02-2_HelloJava2
+cd    /root/02-2_HelloJava2
 
 cat <<EOF > HelloJava.java
 public class HelloJava {
@@ -59,10 +58,10 @@ CMD ["java","HelloDocker"]
 EOF
 
 ###
-### 04
+### 03
 ###
-mkdir /root/04_HelloGo
-cd    /root/04_HelloGo
+mkdir /root/03_HelloGo
+cd    /root/03_HelloGo
 
 cat <<EOF > HelloGo.go
 package main
@@ -71,6 +70,47 @@ func main() {
     fmt.Println("Hello Go")
 }
 EOF
+
+cat <<EOF > Dockerfile
+FROM golang:alpine AS build-stage
+WORKDIR $GOPATH/src/HelloDocker/
+COPY HelloDocker.go .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -ldflags="-w -s" -o /hello/HelloDocker
+
+FROM scratch
+COPY --from=build-stage /hello/HelloDocker /hello/HelloDocker
+CMD ["/hello/HelloDocker"]
+EOF
+
+
+###
+### 04
+###
+mkdir /root/04_HelloNode
+cd    /root/04_HelloNode
+
+cat <<EOF > app.js
+const http = require('http');
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello Node');
+});
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://0.0.0.0:3000/`);
+});
+EOF
+
+cat <<EOF > Dockerfile
+FROM node:12
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD [ "node", "app.js" ]
+EOF
+
 
 ###
 ### 05
