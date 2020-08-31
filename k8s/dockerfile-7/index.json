@@ -1,0 +1,25 @@
+{
+  "title": "dockerfile-1",
+  "description": "dockerfile-1",
+  "difficulty": "Beginner",
+  "time": "5 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "dockerfile-1",
+        "courseData": "courseData.sh",
+        "code": "code.sh",
+        "text": "step1.md"
+      }
+    ]
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "terminals": [
+      {"name": "Terminal 1", "target": "host01"}
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu:1804"
+  }
+}
