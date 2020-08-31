@@ -43,6 +43,46 @@
       "description": "docker-8"
     },
     {
+      "course_id":   "dockerfile-1",
+      "title":       "dockerfile-1",
+      "description": "dockerfile-1"
+    },
+    {
+      "course_id":   "dockerfile-2",
+      "title":       "dockerfile-2",
+      "description": "dockerfile-2"
+    },
+    {
+      "course_id":   "dockerfile-3",
+      "title":       "dockerfile-3",
+      "description": "dockerfile-3"
+    },
+    {
+      "course_id":   "dockerfile-4",
+      "title":       "dockerfile-4",
+      "description": "dockerfile-4"
+    },
+    {
+      "course_id":   "dockerfile-5",
+      "title":       "dockerfile-5",
+      "description": "dockerfile-5"
+    },
+    {
+      "course_id":   "dockerfile-6",
+      "title":       "dockerfile-6",
+      "description": "dockerfile-6"
+    },
+    {
+      "course_id":   "dockerfile-7",
+      "title":       "dockerfile-7",
+      "description": "dockerfile-7"
+    },
+    {
+      "course_id":   "dockerfile-8",
+      "title":       "dockerfile-8",
+      "description": "dockerfile-8"
+    },
+    {
       "course_id": "docker1",
       "title": "Docker Training 1",
       "description": "Docker Image Over View"
