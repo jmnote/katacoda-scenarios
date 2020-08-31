@@ -12,7 +12,7 @@
 
 `npm install`{{execute}}
 
-`npm run serve -- --host 0.0.0.0 --port 80`
+`npm run serve -- --host 0.0.0.0 --port 80`{{execute}}
 
 Terminal 1 + `View HTTP 80`
 
@@ -30,4 +30,4 @@ Terminal 1 + `View HTTP 80`
 
 `docker ps -a`{{execute}}
 
-Terminal 1 + `View HTTP 80`{{execute}}
+Terminal 1 + `View HTTP 80`
