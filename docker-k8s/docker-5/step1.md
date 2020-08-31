@@ -78,6 +78,8 @@
 
 `docker logs web1`{{execute}}
 
+`docker info | grep Root`{{execute}}
+
 `ll /var/lib/docker/containers/*/*.log`{{execute}}
 
 `cat /var/lib/docker/containers/*/*.log`{{execute}}
