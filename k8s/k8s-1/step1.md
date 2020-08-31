@@ -18,19 +18,30 @@
 
 ## kubeconfig (optional)
 
-cat ~/.kube/config
-mv ~/.kube/config .
-kubectl get nodes
-kubectl get nodes --kubeconfig config
-mv config ~/.kube/
-kubectl get nodes
+`cat ~/.kube/config`{{execute}}
+
+`mv ~/.kube/config .`{{execute}}
+
+`kubectl get nodes`{{execute}}
+
+`kubectl get nodes --kubeconfig config`{{execute}}
+
+`mv config ~/.kube/`{{execute}}
+
+`kubectl get nodes`{{execute}}
 
 <br>
 
 ## k8s apiserver
 
-cat ~/.kube/config | grep server
-kubectl config view | grep server
-ip a
-kubectl get nodes -owide
-netstat -tnlp | grep apiserver
+`kubectl config view`{{execute}}
+
+`cat ~/.kube/config | grep server`{{execute}}
+
+`kubectl config view | grep server`{{execute}}
+
+`ip a`{{execute}}
+
+`kubectl get nodes -owide`{{execute}}
+
+`netstat -tnlp | grep apiserver`{{execute}}
