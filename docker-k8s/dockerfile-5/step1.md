@@ -1,25 +1,51 @@
-## 모든 이미지 제거
+<br>
 
-`docker rmi -f $(docker images -aq)`{{execute}}
+## 로컬 테스트 1
 
+`python -V`{{execute}}
 
-## tag
+`python3 -V`{{execute}}
 
-`docker pull alpine:3.11`{{execute}}
+`pip3 install Django`{{execute}}
 
-`docker images alpine`{{execute}}
+`django-admin startproject mysite`{{execute}}
 
-`docker tag alpine:3.11 jmnote/myimage:v1`{{execute}}
+`cd mysite/`{{execute}}
 
-`docker images | egrep 'alpine|myimage'`{{execute}}
+`python3 manage.py runserver 0.0.0.0:80`{{execute}}
 
+Terminal 1 + `View HTTP port 80 on Host 1`
 
-## build
+<br>
 
-`echo FROM alpine:3.11 > Dockerfile`{{execute}}
+## 로컬 테스트 2
+
+`cat mysite/settings.py | grep ALLOWED_HOSTS`{{execute}}
+
+`sed 's/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \["*"\]/g' -i mysite/settings.py`{{execute}}
+
+`cat mysite/settings.py | grep ALLOWED_HOSTS`{{execute}}
+
+`python3 manage.py runserver 0.0.0.0:80`{{execute}}
+
+<br>
+
+## Dockerize
+
+`pip3 freeze`{{execute}}
+
+`pip3 freeze | grep Django`{{execute}}
+
+`pip3 freeze | grep Django > requirements.txt`{{execute}}
+
+`cp ~/05_HelloDjango/Dockerfile .`{{execute}}
 
 `cat Dockerfile`{{execute}}
 
-`docker build -t jmnote/myimage:v2 .`{{execute}}
+`docker build -t HelloDjango .`{{execute}}
 
-`docker images | egrep 'alpine|myimage'`{{execute}}
+`docker run -d -p 80:80 HelloDjango`{{execute}}
+
+`docker ps -a`{{execute}}
+
+Terminal 1 + `View HTTP port 80 on Host 1`
