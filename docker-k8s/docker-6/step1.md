@@ -67,5 +67,3 @@ Terminal 1에서...
 ## inspect
 
 `docker inspect alpine2`{{execute}}
-
-`pstree -ap`
