@@ -45,6 +45,7 @@
 `tty`{{execute}}
 
 
+
 Terminal 1 에서
 
 `cat world.txt`{{execute}}
