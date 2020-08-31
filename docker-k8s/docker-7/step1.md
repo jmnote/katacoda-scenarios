@@ -1,41 +1,42 @@
-먼저 실습환경을 확인봅시다.
+docker run -v -e
 
-## 나는 누구? 여긴 어디?
+## mysql1
 
-`whoami`{{execute}}
+`mkdir /mydata`{{execute}}
 
-`hostname`{{execute}}
+`docker run -d --name mysql1 -v /mydata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=hello mysql`{{execute}}
 
-`pwd`{{execute}}
+`docker exec -it mysql1 bash`{{execute}}
 
-`PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\\$ "`{{execute}}
+`mount | grep /var/lib/mysql`{{execute}}
 
-## OS가 뭔가요?
+`env`{{execute}}
 
-`cat /etc/os-release`{{execute}}
+`mysql -uroot -phello`{{execute}}
 
-`uname`{{execute}}
+`create database database1;`{{execute}}
 
-`uname -a`{{execute}}
+`show databases;`{{execute}}
 
-`uname -r`{{execute}}
+`exit`{{execute}}
 
-## Docker가 뭔가요?
-
-`docker`{{execute}} ★
-
-`docker -v`{{execute}}
-
-`docker version`{{execute}} ★
-
-`ps -ef  | grep dockerd`{{execute}}
-
-[Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
-
-## Katacoda가 뭔가요?
-
-`echo hello > world.txt`{{execute}}
-
-`cat world.txt`{{execute}}
+`exit`{{execute}}
 
 
+## mysql2
+
+`docker rm -f mysql1`{{execute}}
+
+`ll /mydata`{{execute}}
+
+`docker run -d --name mysql2 -v /mydata:/var/lib/mysql  -e MYSQL_ROOT_PASSWORD=hello mysql`{{execute}}
+
+`docker exec -it mysql2 bash`{{execute}}
+
+`mysql -uroot -phello`{{execute}}
+
+`show databases;`{{execute}}
+
+`exit`{{execute}}
+
+`exit`{{execute}}
