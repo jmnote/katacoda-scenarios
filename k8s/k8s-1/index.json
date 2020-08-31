@@ -16,7 +16,7 @@
   "environment": {
     "uilayout": "terminal",
     "terminals": [
-      {"name": "master", "target": "master"},
+      {"name": "controlplane", "target": "controlplane"},
       {"name": "node01", "target": "node01"}
     ]
   },
