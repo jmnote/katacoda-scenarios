@@ -16,7 +16,8 @@
   "environment": {
     "uilayout": "terminal",
     "terminals": [
-      {"name": "Terminal 1", "target": "host01"}
+      {"name": "master", "target": "master"},
+      {"name": "node01", "target": "node01"}
     ]
   },
   "backend": {
