@@ -3,16 +3,44 @@
   "description": "Docker & K8s Training with Katacoda",
   "courses": [
     {
-      "course_id":  "docker-1",
-      "title":      "docker-1"
+      "course_id":   "docker-1",
+      "title":       "docker-1",
+      "description": "docker-1"
     },
     {
-      "course_id":  "docker-2",
-      "title":      "docker-2"
+      "course_id":   "docker-2",
+      "title":       "docker-2",
+      "description": "docker-2"
     },
     {
-      "course_id":  "docker-3",
-      "title":      "docker-3"
+      "course_id":   "docker-3",
+      "title":       "docker-3",
+      "description": "docker-3"
+    },
+    {
+      "course_id":   "docker-4",
+      "title":       "docker-4",
+      "description": "docker-4"
+    },
+    {
+      "course_id":   "docker-5",
+      "title":       "docker-5",
+      "description": "docker-5"
+    },
+    {
+      "course_id":   "docker-6",
+      "title":       "docker-6",
+      "description": "docker-6"
+    },
+    {
+      "course_id":   "docker-7",
+      "title":       "docker-7",
+      "description": "docker-7"
+    },
+    {
+      "course_id":   "docker-8",
+      "title":       "docker-8",
+      "description": "docker-8"
     },
     {
       "course_id": "docker1",
