@@ -40,3 +40,14 @@ docker run -v -e
 `exit`{{execute}}
 
 `exit`{{execute}}
+
+
+## volume (optional)
+
+`docker volume ls`{{execute}}
+
+`docker volume create myvol`{{execute}}
+
+`docker volume ls`{{execute}}
+
+`docker run -d -v myvol:/var/lib/mysql mysql`{{execute}}
