@@ -1,25 +1,32 @@
-## 모든 이미지 제거
+<br>
 
 `docker rmi -f $(docker images -aq)`{{execute}}
 
+<br>
 
-## tag
+## 로컬 테스트
 
-`docker pull alpine:3.11`{{execute}}
+`git clone https://github.com/creativetimofficial/vuetify-material-dashboard.git`{{execute}}
 
-`docker images alpine`{{execute}}
+`cd vuetify-material-dashboard/`{{execute}}
 
-`docker tag alpine:3.11 jmnote/myimage:v1`{{execute}}
+`npm install`{{execute}}
 
-`docker images | egrep 'alpine|myimage'`{{execute}}
+`npm run serve -- --host 0.0.0.0 --port 80`
+
+Terminal 1 + `View HTTP 80`
 
 
-## build
+## Dockerize
 
-`echo FROM alpine:3.11 > Dockerfile`{{execute}}
+`cp ~/05_HelloVuetify/Dockerfile .`{{execute}}
 
 `cat Dockerfile`{{execute}}
 
-`docker build -t jmnote/myimage:v2 .`{{execute}}
+`docker build -t HelloVuetify .`{{execute}}
 
-`docker images | egrep 'alpine|myimage'`{{execute}}
+`docker run -d -p 80:80 HelloVuetify`{{execute}}
+
+`docker ps -a`{{execute}}
+
+Terminal 1 + `View HTTP 80`{{execute}}
