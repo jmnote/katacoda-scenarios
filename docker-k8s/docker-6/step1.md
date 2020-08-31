@@ -67,3 +67,6 @@ Terminal 1에서...
 ## inspect
 
 `docker inspect alpine2 | head -20`{{execute}}
+
+`docker inspect alpine2`{{execute}}
+
