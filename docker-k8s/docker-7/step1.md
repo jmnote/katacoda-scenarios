@@ -50,4 +50,6 @@ docker run -v -e
 
 `docker volume ls`{{execute}}
 
+`docker inspect myvol`{{execute}}
+
 `docker run -d -v myvol:/var/lib/mysql mysql`{{execute}}
