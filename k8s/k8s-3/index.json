@@ -7,8 +7,8 @@
     "steps": [
       {
         "title": "k8s-1",
-        "courseData": "k8s-courseData.sh",
-        "code": "k8s-code.sh",
+        "courseData": "courseData.sh",
+        "code": "code.sh",
         "text": "step1.md"
       }
     ]
