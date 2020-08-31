@@ -11,6 +11,10 @@
       "title":      "docker-2"
     },
     {
+      "course_id":  "docker-3",
+      "title":      "docker-3"
+    },
+    {
       "course_id": "docker1",
       "title": "Docker Training 1",
       "description": "Docker Image Over View"
