@@ -1,41 +1,71 @@
-먼저 실습환경을 확인봅시다.
+중요한 내용은 아닙니다.
 
-## 나는 누구? 여긴 어디?
 
-`whoami`{{execute}}
+## Host
 
-`hostname`{{execute}}
-
-`pwd`{{execute}}
-
-`PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\\$ "`{{execute}}
-
-## OS가 뭔가요?
-
-`cat /etc/os-release`{{execute}}
-
-`uname`{{execute}}
-
-`uname -a`{{execute}}
+`ps -ef `{{execute}}
 
 `uname -r`{{execute}}
 
-## Docker가 뭔가요?
-
-`docker`{{execute}} ★
-
-`docker -v`{{execute}}
-
-`docker version`{{execute}} ★
-
-`ps -ef  | grep dockerd`{{execute}}
-
-[Docker - Wikipedia](https://en.wikipedia.org/wiki/Docker_(software))
-
-## Katacoda가 뭔가요?
-
-`echo hello > world.txt`{{execute}}
-
-`cat world.txt`{{execute}}
+`uptime`{{execute}}
 
 
+## Exited
+
+`docker run -d --name alpine1 alpine`{{execute}}
+
+`docker run -d --name ubuntu1 ubuntu`{{execute}}
+
+`docker ps -a`{{execute}}
+
+
+## Up
+
+`docker run -d --name alpine2 alpine sleep 600`{{execute}}
+
+`docker run -d --name ubuntu2 alpine sleep 600`{{execute}}
+
+`docker ps -a`{{execute}}
+
+
+## exec 1
+
+`docker exec -it alpine1 bash`{{execute}}
+
+`docker exec -it alpine2 bash`{{execute}}
+
+`docker exec -it alpine2 sh`{{execute}}
+
+`cat /etc/os-release`{{execute}}
+
+`ps -ef`{{execute}}
+
+`uname -r`{{execute}}
+
+`uptime`{{execute}}
+
+`ls -alF --color /`{{execute}}
+
+
+## exec 2
+
+Terminal 1에서...
+
+`docker exec -it ubuntu2 bash`{{execute}}
+
+`cat /etc/os-release`{{execute}}
+
+`ps -ef`{{execute}}
+
+`uname -r`{{execute}}
+
+`uptime`{{execute}}
+
+`ls -alF --color /`{{execute}}
+
+
+## inspect
+
+`docker inspect alpine2`{{execute}}
+
+`pstree -ap`
