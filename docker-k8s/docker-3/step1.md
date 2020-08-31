@@ -4,10 +4,20 @@ Docker Hub의 이미지를 내 저장소에 업로드하기
 
 ※ 개인별 실습은 생략합니다.
 
+## 모든 이미지 삭제
+
+`docker rmi -f $(docker images -aq)`{{execute}}
+
+
+## 이미지 다운로드/업로드
 
 `docker pull alpine:3.12.0`{{execute}}
 
-`docker tag alpine:3.12.0 jmnote/myimage:333`{{execute}}
+`docker images`{{execute}}
+
+`docker tag alpine:3.12.0 jmnote/myimage:333`{{execute}} ★ 출발지 → 목적지 (COPY?)
+
+`docker images`{{execute}}
 
 `docker push jmnote/myimage:333`{{execute}}
 
