@@ -313,7 +313,9 @@ cd    /root/12_Volume
 
 
 
-###############################
+
+
+##############################################################
 cat <<EOF > metrics-server.yaml
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -490,3 +492,25 @@ subjects:
   namespace: kube-system
 EOF
 
+##############################################################
+cat <<EOF > hpa.yaml
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: httpd-hpa
+  namespace: default
+spec:
+  maxReplicas: 10
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: httpd-deployment
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50
+EOF
