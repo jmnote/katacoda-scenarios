@@ -19,10 +19,9 @@
 * k8s-05 ReplicaSet
 * k8s-06 Deployment
 * k8s-07 Service
-* k8s-08 Service 2
-* k8s-09 (Service) NodePort
-* k8s-10 Ingress
-* k8s-11 (Deployment) Rollout
-* k8s-12 ConfigMap & Secret
-* k8s-13 Volume
-* k8s-14 기타
+* k8s-08 (Service) NodePort
+* k8s-09 Ingress
+* k8s-10 (Deployment) Rollout
+* k8s-11 ConfigMap & Secret
+* k8s-12 Volume
+* k8s-13 기타
