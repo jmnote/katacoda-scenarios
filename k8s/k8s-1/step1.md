@@ -2,6 +2,8 @@
 
 ## kubectl 명령어
 
+`kubectl`{{execute}}
+
 `kubectl version`{{execute}}
 
 `kubectl cluster-info`{{execute}}
