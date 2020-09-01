@@ -24,4 +24,5 @@
 * k8s-10 (Deployment) Rollout
 * k8s-11 ConfigMap & Secret
 * k8s-12 Volume
-* k8s-13 기타
+* metric
+* HPA
