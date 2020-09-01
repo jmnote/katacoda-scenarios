@@ -41,3 +41,6 @@
 `kubectl apply -f .`{{execute}}
 
 `kubectl delete -f .`{{execute}}
+
+
+Container와 Pod의 차이는?
