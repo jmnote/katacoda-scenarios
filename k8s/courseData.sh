@@ -46,42 +46,181 @@ EOF
 ###
 ### 04
 ###
-mkdir /root/04_HelloNode
-cd    /root/04_HelloNode
+mkdir /root/04_sidecar
+cd    /root/04_sidecar
 
-cat <<EOF > app.js
-const http = require('http');
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello Node');
-});
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://0.0.0.0:3000/`);
-});
+cat <<'EOF' > counter.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: counter
+spec:
+  containers:
+  - name: count
+    image: busybox
+    args:
+    - /bin/sh
+    - -c
+    - >
+      i=0;
+      while true;
+      do
+        echo "$i: $(date)" >> /var/log/1.log;
+        echo "$(date) INFO $i" >> /var/log/2.log;
+        i=$((i+1));
+        sleep 1;
+      done
+    volumeMounts:
+    - name: varlog
+      mountPath: /var/log
+  - name: count-log-1
+    image: busybox
+    args: [/bin/sh, -c, 'tail -n+1 -f /var/log/1.log']
+    volumeMounts:
+    - name: varlog
+      mountPath: /var/log
+  - name: count-log-2
+    image: busybox
+    args: [/bin/sh, -c, 'tail -n+1 -f /var/log/2.log']
+    volumeMounts:
+    - name: varlog
+      mountPath: /var/log
+  volumes:
+  - name: varlog
+    emptyDir: {}
 EOF
-
-cat <<EOF > Dockerfile
-FROM node:12
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-EXPOSE 3000
-CMD [ "node", "app.js" ]
-EOF
-
 
 ###
 ### 05
 ###
-mkdir /root/05_HelloDjango
-cd    /root/05_HelloDjango
-cat <<EOF > Dockerfile
-FROM python:3.8.4
-WORKDIR /app
-COPY . .
-RUN pip install -r requirements.txt
-EXPOSE 80
-CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
+mkdir /root/05_ReplicaSet
+cd    /root/05_ReplicaSet
+cat <<EOF > replicaset.yaml
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: httpd-replicaset
+  labels:
+    app: httpd-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: httpd-replicaset
+  template:
+    metadata:
+      labels:
+        app: httpd-replicaset
+    spec:
+      containers:
+      - image: ethos93/go-httpd:v1
+        imagePullPolicy: Always
+        name: httpd-replicaset
+        ports:
+        - containerPort: 80
+          protocol: TCP
 EOF
+
+
+###
+### 06
+###
+mkdir /root/06_Deployment
+cd    /root/06_Deployment
+cat <<EOF > deploy.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-deployment
+  labels:
+    app: httpd-deployment
+spec:
+  replicas: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: httpd-deployment
+  template:
+    metadata:
+      labels:
+        app: httpd-deployment
+    spec:
+      containers:
+      - image: ethos93/go-httpd:v1
+        name: httpd-deployment
+        ports:
+        - containerPort: 80
+          protocol: TCP
+EOF
+
+###
+### 07
+###
+mkdir /root/07_Service
+cd    /root/07_Service
+cat <<EOF > service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: httpd-clusterip-service
+spec:
+  selector:
+    app: httpd-replicaset
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+EOF
+
+###
+### 08
+###
+mkdir /root/08_NodePort
+cd    /root/08_NodePort
+cat <<EOF > nodeport.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: httpd-nodeport-service
+spec:
+  selector:
+    app: httpd-deployment
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
+EOF
+
+###
+### 09
+###
+mkdir /root/09_Ingress
+cd    /root/09_Ingress
+
+
+###
+### 10
+###
+mkdir /root/10_Rollout
+cd    /root/10_Rollout
+
+
+###
+### 11
+###
+mkdir /root/11_ConfigMap
+cd    /root/11_ConfigMap
+
+
+###
+### 12
+###
+mkdir /root/12_Volume
+cd    /root/12_Volume
+
