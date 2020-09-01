@@ -1,25 +1,25 @@
-## 모든 이미지 제거
-
-`docker rmi -f $(docker images -aq)`{{execute}}
-
-
-## tag
-
-`docker pull alpine:3.11`{{execute}}
-
-`docker images alpine`{{execute}}
-
-`docker tag alpine:3.11 jmnote/myimage:v1`{{execute}}
-
-`docker images | egrep 'alpine|myimage'`{{execute}}
-
+<br>
 
 ## build
 
-`echo FROM alpine:3.11 > Dockerfile`{{execute}}
+`cd /root/07_SupervisorNginx`{{execute}}
 
 `cat Dockerfile`{{execute}}
 
-`docker build -t jmnote/myimage:v2 .`{{execute}}
+`docker built -t supervisor-nginx .`{{execute}}
 
-`docker images | egrep 'alpine|myimage'`{{execute}}
+`docker images supervisor-nginx`{{execute}}
+
+<br>
+
+## run
+
+`docker run -d --name supernginx supervisor-nginx`{{execute}}
+
+`docker exec -it supernginx bash`{{execute}}
+
+`ps -ef`{{execute}}
+
+`pstree`{{execute}}
+
+`supervisorctl status`{{execute}}
