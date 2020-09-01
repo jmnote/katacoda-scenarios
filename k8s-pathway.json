@@ -3,49 +3,9 @@
   "description": "K8s Training with Katacoda",
   "courses": [
     {
-      "course_id":   "k8s-1",
-      "title":       "k8s-1",
-      "description": "k8s-1"
-    },
-    {
-      "course_id":   "k8s-2",
-      "title":       "k8s-2",
-      "description": "k8s-2"
-    },
-    {
-      "course_id":   "k8s-3",
-      "title":       "k8s-3",
-      "description": "k8s-3"
-    },
-    {
-      "course_id":   "k8s-4",
-      "title":       "k8s-4",
-      "description": "k8s-4"
-    },
-    {
-      "course_id":   "k8s-5",
-      "title":       "k8s-5",
-      "description": "k8s-5"
-    },
-    {
-      "course_id":   "k8s-6",
-      "title":       "k8s-6",
-      "description": "k8s-6"
-    },
-    {
-      "course_id":   "k8s-7",
-      "title":       "k8s-7",
-      "description": "k8s-7"
-    },
-    {
-      "course_id":   "k8s-8",
-      "title":       "k8s-8",
-      "description": "k8s-8"
-    },
-    {
-      "course_id":   "k8s-9",
-      "title":       "k8s-9",
-      "description": "k8s-9"
+      "course_id":   "k8s-all",
+      "title":       "k8s-all",
+      "description": "k8s-all"
     }
   ]
 }
