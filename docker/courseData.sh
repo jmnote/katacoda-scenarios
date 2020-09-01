@@ -138,6 +138,7 @@ RUN set -x \
         vim \
 	nano \
 	cron \
+	procps \
 	psmisc \
         net-tools \
         supervisor \
