@@ -1,59 +1,21 @@
 <br>
 
-## kubeconfig (optional)
+## liveness
 
-`which launch.sh`{{execute}}
+`kubectl apply -f web1.yaml`{{execute}}
 
-`cat /usr/bin/launch.sh`{{execute}}
+`kubectl get pod web1 -w`{{execute}}
 
-`kubectl get nodes`{{execute}}
+`kubectl exec -it web1 -- curl localhost`{{execute}}
 
-`cat ~/.kube/config`{{execute}}
+`kubectl exec -it web1 -- supervisorctl status`{{execute}}
 
-`mv ~/.kube/config .`{{execute}}
+`kubectl exec -it web1 -- supervisorctl stop nginx`{{execute}}
 
-`kubectl get nodes`{{execute}}
+`kubectl describe pod web1`{{execute}}
 
-`kubectl get nodes --kubeconfig config`{{execute}}
+`kubectl get event | grep web1`{{execute}}
 
-`mv config ~/.kube/`{{execute}}
 
-`kubectl get nodes`{{execute}}
+liveness와 readiness의 차이는?
 
-<br>
-
-## kubectl 명령어
-
-`kubectl`{{execute}}
-
-`kubectl version`{{execute}}
-
-`kubectl cluster-info`{{execute}}
-
-`kubectl get nodes`{{execute}}
-
-`kubectl get nodes -owide`{{execute}}
-
-`kubectl get pods`{{execute}}
-
-`kubectl get pods -n default`{{execute}}
-
-`kubectl get namespaces`{{execute}}
-
-`kubectl get pods -A`{{execute}}
-
-<br>
-
-## k8s apiserver (optional)
-
-`kubectl config view`{{execute}}
-
-`cat ~/.kube/config | grep server`{{execute}}
-
-`kubectl config view | grep server`{{execute}}
-
-`ip a`{{execute}}
-
-`kubectl get nodes -owide`{{execute}}
-
-`netstat -tnlp | grep apiserver`{{execute}}
