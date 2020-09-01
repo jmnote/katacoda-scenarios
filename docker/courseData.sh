@@ -125,3 +125,29 @@ RUN pip install -r requirements.txt
 EXPOSE 80
 CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
 EOF
+
+###
+### 07
+###
+mkdir /root/07_SupervisorNginx
+cd    /root/07_SupervisorNginx
+cat <<EOF > Dockerfile
+FROM nginx
+RUN set -x \
+&& apt-get update && apt-get install -y \
+        vim \
+	nano \
+	cron \
+	psmisc \
+        net-tools \
+        supervisor \
+&& rm -rf /var/lib/apt/lists/* \
+&& echo '* * * * * date >> /mycron1.txt' > /etc/cron.d/mycron1 \
+&& mkdir -p /var/log/supervisor \
+&& echo "[program:nginx]\n\
+command=/usr/sbin/nginx -g 'daemon off;'\n\
+[program:cron]\n\
+command=cron -f" > /etc/supervisor/conf.d/supervisord.conf
+EXPOSE 22
+CMD ["/usr/bin/supervisord","-n"]
+EOF
