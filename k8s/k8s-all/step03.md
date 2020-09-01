@@ -2,6 +2,12 @@
 
 ## liveness
 
+`cd /root/03_pod_liveness`{{execute}}
+
+`ll`{{execute}}
+
+`cat web1.yaml`{{execute}}
+
 `kubectl apply -f web1.yaml`{{execute}}
 
 `kubectl get pod web1 -w`{{execute}}
