@@ -1,59 +1,50 @@
 <br>
 
-## kubeconfig (optional)
+## yaml
 
-`which launch.sh`{{execute}}
+`cd /root/04_sidecar`{{execute}}
 
-`cat /usr/bin/launch.sh`{{execute}}
+`ll`{{execute}}
 
-`kubectl get nodes`{{execute}}
+`cat counter.yaml`{{execute}}
 
-`cat ~/.kube/config`{{execute}}
+`kubectl apply -f counter.yaml`{{execute}}
 
-`mv ~/.kube/config .`{{execute}}
-
-`kubectl get nodes`{{execute}}
-
-`kubectl get nodes --kubeconfig config`{{execute}}
-
-`mv config ~/.kube/`{{execute}}
-
-`kubectl get nodes`{{execute}}
+`kubectl get pod counter`{{execute}}
 
 <br>
 
-## kubectl 명령어
+## exec
 
-`kubectl`{{execute}}
+`kubectl exec -it counter -- hostname`{{execute}}
 
-`kubectl version`{{execute}}
+`kubectl exec -it counter -c count -- hostname`{{execute}}
 
-`kubectl cluster-info`{{execute}}
+`kubectl exec -it counter -c count -- ps -ef`{{execute}}
 
-`kubectl get nodes`{{execute}}
+`kubectl exec -it counter -c count-log-1 -- hostname`{{execute}}
 
-`kubectl get nodes -owide`{{execute}}
+`kubectl exec -it counter -c count-log-1 -- ps -ef`{{execute}}
 
-`kubectl get pods`{{execute}}
+`kubectl exec -it counter -c count-log-2 -- hostname`{{execute}}
 
-`kubectl get pods -n default`{{execute}}
+`kubectl exec -it counter -c count-log-2 -- ps -ef`{{execute}}
 
-`kubectl get namespaces`{{execute}}
-
-`kubectl get pods -A`{{execute}}
 
 <br>
 
-## k8s apiserver (optional)
+## log
 
-`kubectl config view`{{execute}}
+`kubectl logs counter`{{execute}}
 
-`cat ~/.kube/config | grep server`{{execute}}
+`kubectl logs counter -c count`{{execute}}
 
-`kubectl config view | grep server`{{execute}}
+`kubectl logs counter -c count-log-1`{{execute}}
 
-`ip a`{{execute}}
+`kubectl logs counter -c count-log-2`{{execute}}
 
-`kubectl get nodes -owide`{{execute}}
+<br>
 
-`netstat -tnlp | grep apiserver`{{execute}}
+## 삭제
+
+`kubectl delete -f counter.yaml`{{execute}}
