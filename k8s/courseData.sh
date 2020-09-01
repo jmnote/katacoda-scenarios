@@ -26,30 +26,22 @@ EOF
 mkdir /root/03_pod_liveness
 cd    /root/03_pod_liveness
 
-cat <<EOF > HelloGo.go
+cat <<EOF > web1.yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  labels:
-    test: liveness
-  name: liveness-exec
+  name: web1
 spec:
   containers:
-  - name: liveness
-    image: k8s.gcr.io/busybox
-    args:
-    - /bin/sh
-    - -c
-    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
+  - name: web1
+    image: jmnote/supervisor-nginx
     livenessProbe:
-      exec:
-        command:
-        - cat
-        - /tmp/healthy
-      initialDelaySeconds: 5
-      periodSeconds: 5
+      httpGet:
+        path: /
+        port: 80
+      initialDelaySeconds: 10
+      timeoutSeconds: 10
 EOF
-
 
 ###
 ### 04
