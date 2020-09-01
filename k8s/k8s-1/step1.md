@@ -6,6 +6,8 @@
 
 `cat /usr/bin/launch.sh`{{execute}}
 
+`kubectl get nodes`{{execute}}
+
 `cat ~/.kube/config`{{execute}}
 
 `mv ~/.kube/config .`{{execute}}
