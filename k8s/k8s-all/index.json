@@ -60,7 +60,7 @@
     ],
     "intro": {
        "background": "background.sh",
-       "foreground": "foreground.sh",
+       "foreground": "foreground.sh"
     },
     "assets": {
       "host01": [
