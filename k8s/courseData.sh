@@ -1,85 +1,53 @@
 #!/bin/bash
 
-#!/bin/bash
-
 ###
-### 01
+### 02 kubectl & pod
 ###
-mkdir /root/01_MyAlpine
-cd    /root/01_MyAlpine
+mkdir /root/02_kubectl_pod
+cd    /root/02_kubectl_pod
 
-cat <<EOF > Dockerfile
-FROM alpine:3.11
-EOF
-
-
-###
-### 02
-###
-mkdir /root/02-1_HelloJava
-cd    /root/02-1_HelloJava
-
-cat <<EOF > HelloJava.java
-public class HelloJava {
-	public static void main(String[] args) {
-		System.out.println("Hello Java");
-	}
-}
-EOF
-
-cat <<EOF > Dockerfile
-FROM openjdk:8
-COPY HelloJava.java /app/
-WORKDIR /app
-RUN javac HelloJava.java
-CMD ["java","HelloJava"]
-EOF
-
-mkdir /root/02-2_HelloJava2
-cd    /root/02-2_HelloJava2
-
-cat <<EOF > HelloJava.java
-public class HelloJava {
-	public static void main(String[] args) {
-		System.out.println("Hello Java");
-	}
-}
-EOF
-
-cat <<EOF > Dockerfile
-FROM openjdk:8 as build-stage
-COPY HelloJava.java /app/
-WORKDIR /app
-RUN javac HelloDocker.java
-FROM openjdk:8-jre
-COPY --from=build-stage /app/HelloDocker.class /app/HelloDocker.class
-WORKDIR /app
-CMD ["java","HelloDocker"]
+cat <<EOF > web1.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web1
+spec:
+  containers:
+  - name: web1
+    image: nginx
+    ports:
+    - containerPort: 80
+      protocol: TCP
 EOF
 
 ###
-### 03
+### 03 pod liveness
 ###
-mkdir /root/03_HelloGo
-cd    /root/03_HelloGo
+mkdir /root/03_pod_liveness
+cd    /root/03_pod_liveness
 
 cat <<EOF > HelloGo.go
-package main
-import "fmt"
-func main() {
-    fmt.Println("Hello Go")
-}
-EOF
-
-cat <<EOF > Dockerfile
-FROM golang:alpine AS build-stage
-WORKDIR $GOPATH/src/HelloDocker/
-COPY HelloDocker.go .
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -ldflags="-w -s" -o /hello/HelloDocker
-
-FROM scratch
-COPY --from=build-stage /hello/HelloDocker /hello/HelloDocker
-CMD ["/hello/HelloDocker"]
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    test: liveness
+  name: liveness-exec
+spec:
+  containers:
+  - name: liveness
+    image: k8s.gcr.io/busybox
+    args:
+    - /bin/sh
+    - -c
+    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
+    livenessProbe:
+      exec:
+        command:
+        - cat
+        - /tmp/healthy
+      initialDelaySeconds: 5
+      periodSeconds: 5
 EOF
 
 
