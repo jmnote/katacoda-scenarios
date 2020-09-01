@@ -1,0 +1,26 @@
+{
+  "title": "k8s-1",
+  "description": "k8s-1",
+  "difficulty": "Beginner",
+  "time": "5 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "k8s-1",
+        "courseData": "courseData.sh",
+        "code": "code.sh",
+        "text": "step1.md"
+      }
+    ]
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "terminals": [
+      {"name": "master", "target": "host01"},
+      {"name": "node01", "target": "host02"}
+    ]
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}
