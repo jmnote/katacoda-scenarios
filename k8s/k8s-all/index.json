@@ -1,8 +1,8 @@
 {
-  "title": "k8s-1",
-  "description": "k8s-1",
+  "title": "k8s-all",
+  "description": "k8s-all",
   "difficulty": "Beginner",
-  "time": "5 minutes",
+  "time": "180 minutes",
   "details": {
     "steps": [
       {
@@ -10,8 +10,56 @@
         "courseData": "courseData.sh",
         "code": "code.sh",
         "text": "step1.md"
-      }
-    ]
+      },
+      {
+        "title": "k8s-2",
+        "text": "step2.md"
+      },
+      {
+        "title": "k8s-3",
+        "text": "step3.md"
+      },
+      {
+        "title": "k8s-4",
+        "text": "step4.md"
+      },
+      {
+        "title": "k8s-5",
+        "text": "step5.md"
+      },
+      {
+        "title": "k8s-6",
+        "text": "step6.md"
+      },
+      {
+        "title": "k8s-7",
+        "text": "step7.md"
+      },
+      {
+        "title": "k8s-8",
+        "text": "step8.md"
+      },
+      {
+        "title": "k8s-9",
+        "text": "step9.md"
+      },
+      {
+        "title": "k8s-10",
+        "text": "step10.md"
+      },
+      {
+        "title": "k8s-11",
+        "text": "step11.md"
+      },
+      {
+        "title": "k8s-12",
+        "text": "step12.md"
+      },
+      {
+        "title": "k8s-13",
+        "text": "step13.md"
+      },
+    ],
   },
   "environment": {
     "uilayout": "terminal",
