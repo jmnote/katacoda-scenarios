@@ -58,8 +58,8 @@
       {
         "title": "k8s-13",
         "text": "step13.md"
-      },
-    ],
+      }
+    ]
   },
   "environment": {
     "uilayout": "terminal",
