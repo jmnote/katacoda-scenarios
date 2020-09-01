@@ -61,6 +61,14 @@
       }
     ]
   },
+    "assets": {
+      "host01": [
+        {"file": "hpa_deployment.yaml", "target": "/root/99_hpa"},
+        {"file": "hpa_hpa.yaml",        "target": "/root/99_hpa"},
+        {"file": "metrics-server.yaml", "target": "/root/10_metrics"},
+      ]
+    }
+  },
   "environment": {
     "uilayout": "terminal",
     "terminals": [
