@@ -1,5 +1,25 @@
 <br>
 
+## kubeconfig (optional)
+
+`which launch.sh`{{execute}}
+
+`cat /usr/bin/launch.sh`{{execute}}
+
+`cat ~/.kube/config`{{execute}}
+
+`mv ~/.kube/config .`{{execute}}
+
+`kubectl get nodes`{{execute}}
+
+`kubectl get nodes --kubeconfig config`{{execute}}
+
+`mv config ~/.kube/`{{execute}}
+
+`kubectl get nodes`{{execute}}
+
+<br>
+
 ## kubectl 명령어
 
 `kubectl`{{execute}}
@@ -19,26 +39,6 @@
 `kubectl get namespaces`{{execute}}
 
 `kubectl get pods -A`{{execute}}
-
-<br>
-
-## kubeconfig (optional)
-
-`which launch.sh`{{execute}}
-
-`cat /usr/bin/launch.sh`{{execute}}
-
-`cat ~/.kube/config`{{execute}}
-
-`mv ~/.kube/config .`{{execute}}
-
-`kubectl get nodes`{{execute}}
-
-`kubectl get nodes --kubeconfig config`{{execute}}
-
-`mv config ~/.kube/`{{execute}}
-
-`kubectl get nodes`{{execute}}
 
 <br>
 
