@@ -1,59 +1,43 @@
 <br>
 
-## kubeconfig (optional)
+## Pod
 
-`which launch.sh`{{execute}}
+`cd /root/02_kubectl_pod`{{execute}}
 
-`cat /usr/bin/launch.sh`{{execute}}
+`ll`{{execute}}
 
-`kubectl get nodes`{{execute}}
+`cat web1.yaml`{{execute}}
 
-`cat ~/.kube/config`{{execute}}
+`kubectl apply -f web1.yaml`{{execute}}
 
-`mv ~/.kube/config .`{{execute}}
+`kubectl get pod`{{execute}}
 
-`kubectl get nodes`{{execute}}
+`kubectl get pod -owide`{{execute}}
 
-`kubectl get nodes --kubeconfig config`{{execute}}
+`kubectl exec -it web1 bash`{{execute}}
 
-`mv config ~/.kube/`{{execute}}
+`exit`{{execute}}
 
-`kubectl get nodes`{{execute}}
+`kubectl exec -it web1 -- bash`{{execute}}
 
-<br>
+`curl localhost`{{execute}}
 
-## kubectl 명령어
+`exit`{{execute}}
 
-`kubectl`{{execute}}
-
-`kubectl version`{{execute}}
-
-`kubectl cluster-info`{{execute}}
-
-`kubectl get nodes`{{execute}}
-
-`kubectl get nodes -owide`{{execute}}
-
-`kubectl get pods`{{execute}}
-
-`kubectl get pods -n default`{{execute}}
-
-`kubectl get namespaces`{{execute}}
-
-`kubectl get pods -A`{{execute}}
+`kubectl delete pod web1`{{execute}}
 
 <br>
 
-## k8s apiserver (optional)
+## kubectl
 
-`kubectl config view`{{execute}}
+`kubectl create -f web1.yaml`{{execute}}
 
-`cat ~/.kube/config | grep server`{{execute}}
+`kubectl delete -f web1.yaml`{{execute}}
 
-`kubectl config view | grep server`{{execute}}
+`kubectl apply -f web1.yaml`{{execute}}
 
-`ip a`{{execute}}
+`kubectl delete -f web1.yaml`{{execute}}
 
-`kubectl get nodes -owide`{{execute}}
+`kubectl apply -f .`{{execute}}
 
-`netstat -tnlp | grep apiserver`{{execute}}
+`kubectl delete -f .`{{execute}}
