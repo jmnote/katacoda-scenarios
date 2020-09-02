@@ -70,7 +70,7 @@
 
 `ls -alF /usr/share/nginx/html/`{{execute}}
 
-`exit`{{execute}}
+`exit`
 
 <br>
 
