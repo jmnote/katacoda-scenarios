@@ -2,7 +2,7 @@
 
 ## Pod
 
-`cd /root/02_kubectl_pod`{{execute}}
+`cd /root/02/`{{execute}}
 
 `ll`{{execute}}
 
