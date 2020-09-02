@@ -27,6 +27,8 @@ docker run -v -e
 
 `docker rm -f mysql1`{{execute}}
 
+`docker ps -a`{{execute}}
+
 `ll /mydata`{{execute}}
 
 `docker run -d --name mysql2 -v /mydata:/var/lib/mysql  -e MYSQL_ROOT_PASSWORD=hello mysql`{{execute}}
