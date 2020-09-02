@@ -36,7 +36,7 @@
 
 <br>
 
-## log
+## logs
 
 `kubectl logs counter`{{execute}}
 
