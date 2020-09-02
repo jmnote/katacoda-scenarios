@@ -11,6 +11,6 @@
 
 `cat Dockerfile`{{execute}}
 
-`docker build -t HelloNode .`{{execute}}
+`docker build -t hello-node .`{{execute}}
 
-`docker run -d --name HelloNode -p 80:3000 HelloNode`{{execute}}
+`docker run -d --name hello-node1 -p 80:3000 hello-node`{{execute}}
