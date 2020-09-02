@@ -20,13 +20,13 @@
 
 `kubectl exec -it web1 bash`{{execute}}
 
-`exit`{{execute}}
+`exit`
 
 `kubectl exec -it web1 -- bash`{{execute}}
 
 `curl localhost`{{execute}}
 
-`exit`{{execute}}
+`exit`
 
 `kubectl delete pod web1`{{execute}}
 
