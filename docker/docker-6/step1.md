@@ -48,13 +48,15 @@
 
 `ls -alF --color /`{{execute}}
 
+`exit`{{execute}}
+
 <br>
 
 ## exec 2
 
-Terminal 1에서...
-
 `docker exec -it ubuntu2 sh`{{execute}}
+
+`exit`{{execute}}
 
 `docker exec -it ubuntu2 bash`{{execute}}
 
@@ -67,6 +69,8 @@ Terminal 1에서...
 `uptime`{{execute}}
 
 `ls -alF --color /`{{execute}}
+
+`exit`{{execute}}
 
 <br>
 
