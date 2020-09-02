@@ -6,20 +6,26 @@
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 12_cronjob.yaml`{{execute}}
+
+<br>
+
+## apply
+
+`kubectl apply -f 12_cronjob.yaml`{{execute}}
+
+`kubectl get cronjob`{{execute}}
+
+`kubectl get job`{{execute}}
+
+`kubectl get pod`{{execute}}
+
+`POD=$(kubectl get pod | grep hello | tail -1 | awk '{print $1}')`{{execute}}
+
+`kubectl logs ${POD}`{{execute}}
+
+<br>
 
 ## deploy
 
-`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
-
-`kubectl apply -f deploy.yaml`{{execute}}
-
-`kubectl delete pod POD이름`{{execute}}
-
-## deploy
-
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
-
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
-
-`kubectl apply -f deploy.yaml`{{execute}}
+`kubectl delete -f .`{{execute}}
