@@ -1,12 +1,16 @@
 <br>
 
-## Pod
+## yaml
 
 `cd /root/02/`{{execute}}
 
 `ll`{{execute}}
 
 `cat web1.yaml`{{execute}}
+
+<br>
+
+## apply
 
 `kubectl apply -f web1.yaml`{{execute}}
 
@@ -41,6 +45,3 @@
 `kubectl apply -f .`{{execute}}
 
 `kubectl delete -f .`{{execute}}
-
-
-Container와 Pod의 차이는?
