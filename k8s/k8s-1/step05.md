@@ -22,7 +22,11 @@
 
 ## pod 삭제
 
-`kubectl delete pod POD이름`{{execute}}
+`kubectl get pod | grep httpd | head -1 | awk '{print $1}'`{{execute}}
+
+`POD=$(kubectl get pod | grep httpd | head -1 | awk '{print $1}')`{{execute}}
+
+`kubectl delete pod $POD`{{execute}}
 
 `kubectl get pod`{{execute}}
 
