@@ -70,6 +70,8 @@
 
 ## run -v
 
+`echo hello nginx`{{execute}}
+
 `echo hello nginx > index.html`{{execute}}
 
 `cat index.html`{{execute}}
