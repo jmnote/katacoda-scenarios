@@ -1,3 +1,5 @@
+#!/bin/bash
+
 apt-get update -y
 apt install nfs-kernel-server --fix-missing -y
 systemctl enable nfs-server
