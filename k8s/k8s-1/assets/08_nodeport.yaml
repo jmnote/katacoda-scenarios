@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: httpd-nodeport-service
 spec:
+  type: NodePort
   selector:
     app: httpd-deployment
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: NodePort
