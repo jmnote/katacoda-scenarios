@@ -8,9 +8,11 @@
 
 `cat 14_deployment.yaml`{{execute}}
 
-`cat 14_nodeport.yaml`{{execute}}
+`cat 14_service.yaml`{{execute}}
 
 `cat 14_hpa.yaml`{{execute}}
+
+`docker run k8s.gcr.io/hpa-example cat /var/www/html/index.php`{{execute}}
 
 <br>
 
@@ -22,7 +24,11 @@
 
 다른 탭에서...
 
-`while true; do curl localhost:32000; done`{{execute}}
+`kubectl run curlpod --image=radial/busyboxplus:curl --generator=run-pod/v1 --command sleep 36000`
+
+`kubectl exec -it curlpod -- sh`{{execute}}
+
+`while true; do wget -q -O- http://php-apache; done`{{execute}}
 
 원래 탭 확인
 
