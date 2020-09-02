@@ -1,20 +1,79 @@
 {
-  "title": "k8s-1",
-  "description": "k8s-1",
+  "title": "k8s-all",
+  "description": "k8s-all",
   "difficulty": "Beginner",
-  "time": "5 minutes",
+  "time": "180 minutes",
   "details": {
     "steps": [
       {
-        "title": "k8s-1",
-        "courseData": "courseData.sh",
-        "code": "code.sh",
-        "text": "step1.md"
+        "title": "k8s-01",
+        "text": "step01.md"
+      },
+      {
+        "title": "k8s-02",
+        "text": "step02.md"
+      },
+      {
+        "title": "k8s-03",
+        "text": "step03.md"
+      },
+      {
+        "title": "k8s-04",
+        "text": "step04.md"
+      },
+      {
+        "title": "k8s-05",
+        "text": "step05.md"
+      },
+      {
+        "title": "k8s-06",
+        "text": "step06.md"
+      },
+      {
+        "title": "k8s-07",
+        "text": "step07.md"
+      },
+      {
+        "title": "k8s-08",
+        "text": "step08.md"
+      },
+      {
+        "title": "k8s-09",
+        "text": "step09.md"
+      },
+      {
+        "title": "k8s-10",
+        "text": "step10.md"
+      },
+      {
+        "title": "k8s-11",
+        "text": "step11.md"
+      },
+      {
+        "title": "k8s-12",
+        "text": "step12.md"
+      },
+      {
+        "title": "k8s-13",
+        "text": "step13.md"
       }
-    ]
+    ],
+    "intro": {
+       "background": "background.sh",
+       "foreground": "foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {"file": "hpa_deployment.yaml", "target": "/root/99_hpa"},
+        {"file": "hpa_hpa.yaml",        "target": "/root/99_hpa"},
+        {"file": "metrics-server.yaml", "target": "/root/10_metrics"}
+      ]
+    }
   },
   "environment": {
     "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "NodePort", "port": 32000}, {"name": "Ingress", "port": 80}],
     "terminals": [
       {"name": "master", "target": "host01"},
       {"name": "node01", "target": "host02"}

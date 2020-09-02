@@ -3,9 +3,9 @@
   "description": "K8s Training with Katacoda",
   "courses": [
     {
-      "course_id":   "k8s-all",
-      "title":       "k8s-all",
-      "description": "k8s-all"
+      "course_id":   "k8s-1",
+      "title":       "k8s-1",
+      "description": "k8s-1"
     }
   ]
 }
