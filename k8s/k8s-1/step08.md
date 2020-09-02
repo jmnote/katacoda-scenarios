@@ -10,13 +10,13 @@
 
 `cat 08_nodeport.yaml`{{execute}}
 
-`cat 08_nodeport2.yaml`{{execute}}
-
 <br>
 
-## service 1
+## nodeport 1
 
-`kubectl apply -f .`{{execute}}
+`kubectl apply -f 08_httpd-deployment.yaml`{{execute}}
+
+`kubectl apply -f 08_nodeport.yaml`{{execute}}
 
 `kubectl get pod`{{execute}}
 
@@ -42,7 +42,9 @@
 
 <br>
 
-## service 2
+## nodeport 2
+
+`cat 08_nodeport2.yaml`{{execute}}
 
 `diff 08_nodeport.yaml 08_nodeport2.yaml`{{execute}}
 
