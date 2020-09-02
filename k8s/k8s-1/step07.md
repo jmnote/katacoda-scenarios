@@ -32,6 +32,8 @@
 
 `kubectl exec -it curlpod -- bash`{{execute}}
 
+`kubectl exec -it curlpod -- sh`{{execute}}
+
 `curl httpd-clusterip-service`{{execute}}
 
 `cat /etc/hosts`{{execute}}
