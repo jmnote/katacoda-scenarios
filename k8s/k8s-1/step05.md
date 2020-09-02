@@ -12,7 +12,7 @@
 
 ## apply
 
-`kubectl apply -f replicaset.yaml`{{execute}}
+`kubectl apply -f 05_replicaset.yaml`{{execute}}
 
 `kubectl get replicaset`{{execute}}
 
