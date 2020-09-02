@@ -2,7 +2,7 @@
 
 ## yaml
 
-`cd /root/13/`{{execute}}
+`cd /root/17/`{{execute}}
 
 `ll`{{execute}}
 
