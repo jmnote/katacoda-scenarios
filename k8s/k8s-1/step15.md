@@ -1,25 +1,75 @@
 <br>
 
-## yaml
+## yaml 1
 
 `cd /root/15/`{{execute}}
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 15-1_configmap.yaml`{{execute}}
 
-## deploy
+`cat 15-1_deployment.yaml`{{execute}}
 
-`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
+<br>
 
-`kubectl apply -f deploy.yaml`{{execute}}
+## deploy 1 (error)
 
-`kubectl delete pod POD이름`{{execute}}
+`kubectl apply -f 15-1_deployment.yaml`{{execute}}
 
-## deploy
+`kubectl get pod`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
+`kubectl describe pod`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
+`kubectl delete -f .`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
+<br>
+
+## deploy 2
+
+`kubectl apply -f 15-1_configmap.yaml`{{execute}}
+
+`kubectl get cm nginx-configmap`{{execute}}
+
+`kubectl describe cm nginx-configmap`{{execute}}
+
+`kubectl apply -f 15-1_deployment.yaml`{{execute}}
+
+`kubectl get pod`{{execute}}
+
+`kubectl get pod | grep nginx | head -1 | awk '{print $1}'`{{execute}}
+
+`POD=$(kubectl get pod | grep nginx | head -1 | awk '{print $1}')`{{execute}}
+
+`kubectl exec -it ${POD} -- env`{{execute}}
+
+<br>
+
+## yaml 2
+
+`ll`{{execute}}
+
+`cat 15-2_configmap.yaml`{{execute}}
+
+`cat 15-2_pod.yaml`{{execute}}
+
+<br>
+
+## deploy 2
+
+`kubectl apply -f .`{{execute}}
+
+`kubectl get configmap`{{execute}}
+
+`kubectl describe configmap`{{execute}}
+
+`kubectl get pod`{{execute}}
+
+`kubectl exec -it nginx -- curl localhost`{{execute}}
+
+`kubectl exec -it nginx -- ls -alF /usr/share/nginx/html/`{{execute}}
+
+<br>
+
+## delete
+
+`kubectl delete -f .`{{execute}}
