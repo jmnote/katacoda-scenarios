@@ -48,9 +48,11 @@
 
 `curl localhost:포트번호`{{execute}}
 
-`docker logs web3`{{execute}}
+`docker logs web1`{{execute}}
 
-`docker logs web3 -f`{{execute}}
+`docker logs web1 -f`{{execute}}
+
+터미널 1에서...
 
 `curl localhost:8081/asdf`{{execute}}
 
