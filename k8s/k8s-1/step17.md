@@ -1,25 +1,38 @@
 <br>
 
+## nfs server (admin)
+
+`kubectl get storageclass -A`{{execute}}
+
+`cd /root/`{{execute}}
+
+`cat 17_nfs-server-manaul.sh`{{execute}}
+
+`bash 17_nfs-server-manaul.sh`{{execute}}
+
+`kubectl get storageclass -A`{{execute}}
+
+<br>
+
 ## yaml
 
 `cd /root/17/`{{execute}}
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 17_pod.yaml`{{execute}}
 
-## deploy
+`cat 17_pvc.yaml`{{execute}}
 
-`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
+<br>
 
-`kubectl apply -f deploy.yaml`{{execute}}
+## apply
 
-`kubectl delete pod POD이름`{{execute}}
+`kubectl apply -f .`{{execute}}
 
-## deploy
+<br>
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
+## delete
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
+`kubectl delete -f .`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
