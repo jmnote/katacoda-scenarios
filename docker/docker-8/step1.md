@@ -3,6 +3,12 @@
 
 `docker run -d --name mysql1 -e MYSQL_ROOT_PASSWORD=hello -e MYSQL_DATABASE=wordpress mysql`{{execute}}
 
+`docker exec -it mysql1 bash`{{execute}}
+
+`mysql -uroot -phello`{{execute}}
+
+`SHOW DATABASES;`{{execute}}
+
 `docker run -d --name wordpress1 -p 80:80 wordpress`{{execute}}
 
 `docker inspect mysql1 | grep IPAddress`{{execute}}
