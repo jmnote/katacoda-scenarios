@@ -11,6 +11,6 @@
 
 `cat Dockerfile`{{execute}}
 
-`docker build -t HelloGo .`{{execute}}
+`docker build -t hello-go .`{{execute}}
 
-`docker run HelloGo`{{execute}}
+`docker run hello-go`{{execute}}
