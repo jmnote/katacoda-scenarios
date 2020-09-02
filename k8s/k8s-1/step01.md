@@ -8,7 +8,7 @@
 
 <br>
 
-## kubeconfig (optional)
+## kubeconfig
 
 `kubectl get nodes`{{execute}}
 
@@ -48,7 +48,7 @@
 
 <br>
 
-## k8s apiserver (optional)
+## k8s apiserver (admin)
 
 `kubectl config view`{{execute}}
 
