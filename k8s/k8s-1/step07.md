@@ -26,11 +26,11 @@
 
 ## curl
 
-`kubectl run ubuntu --image=ubuntu --generator=run-pod/v1 --command -- sleep 180`{{execute}}
+`kubectl run curlpod --image=radial/busyboxplus:curl --generator=run-pod/v1`{{execute}}
 
 `kubectl get pod`{{execute}}
 
-`kubectl exec -it ubuntu -- bash`{{execute}}
+`kubectl exec -it curlpod -- bash`{{execute}}
 
 `curl httpd-clusterip-service`{{execute}}
 
@@ -38,7 +38,7 @@
 
 `exit`
 
-`kubectl exec -it ubuntu -- curl httpd-clusterip-service`{{execute}}
+`kubectl exec -it curlpod -- curl httpd-clusterip-service`{{execute}}
 
 <br>
 
