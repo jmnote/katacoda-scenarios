@@ -23,7 +23,7 @@ Optional...
 
 `docker run -d --name alpine2 alpine sleep 600`{{execute}}
 
-`docker run -d --name ubuntu2 alpine sleep 600`{{execute}}
+`docker run -d --name ubuntu2 ubuntu sleep 600`{{execute}}
 
 `docker ps -a`{{execute}}
 
@@ -51,9 +51,9 @@ Optional...
 
 Terminal 1에서...
 
-`docker exec -it ubuntu2 bash`{{execute}}
-
 `docker exec -it ubuntu2 sh`{{execute}}
+
+`docker exec -it ubuntu2 bash`{{execute}}
 
 `cat /etc/os-release`{{execute}}
 
