@@ -26,7 +26,7 @@
 
 ## curl
 
-`kubectl run curlpod --image=radial/busyboxplus:curl --generator=run-pod/v1`{{execute}}
+`kubectl run curlpod --image=radial/busyboxplus:curl --generator=run-pod/v1 --command sleep 36000`{{execute}}
 
 `kubectl get pod`{{execute}}
 
