@@ -4,7 +4,7 @@ metadata:
   name: httpd-clusterip-service
 spec:
   selector:
-    app: httpd-replicaset
+    app: httpd-deployment
   ports:
     - protocol: TCP
       port: 80
