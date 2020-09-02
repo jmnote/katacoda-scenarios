@@ -2,7 +2,7 @@
 
 ## yaml
 
-`cd /root/06_Deployment`{{execute}}
+`cd /root/06/`{{execute}}
 
 `ll`{{execute}}
 
