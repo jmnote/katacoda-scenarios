@@ -1,12 +1,12 @@
 {
-  "title": "dockerfile-1",
-  "description": "dockerfile-1",
+  "title": "dockerfile-6",
+  "description": "dockerfile-6",
   "difficulty": "Beginner",
   "time": "5 minutes",
   "details": {
     "steps": [
       {
-        "title": "dockerfile-1",
+        "title": "dockerfile-6",
         "courseData": "courseData.sh",
         "code": "code.sh",
         "text": "step1.md"
