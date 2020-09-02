@@ -72,3 +72,8 @@ Terminal 1에서...
 
 `docker inspect alpine2`{{execute}}
 
+<br>
+
+## inspect
+
+`docker rm -f $(docker ps -aq)`{{execute}}
