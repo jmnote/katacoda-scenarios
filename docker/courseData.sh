@@ -73,13 +73,13 @@ EOF
 
 cat <<EOF > Dockerfile
 FROM golang:alpine AS build-stage
-WORKDIR $GOPATH/src/HelloDocker/
-COPY HelloDocker.go .
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -ldflags="-w -s" -o /hello/HelloDocker
+WORKDIR $GOPATH/src/HelloGo/
+COPY HelloGo.go .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -ldflags="-w -s" -o /hello/HelloGo
 
 FROM scratch
-COPY --from=build-stage /hello/HelloDocker /hello/HelloDocker
-CMD ["/hello/HelloDocker"]
+COPY --from=build-stage /hello/HelloGo /hello/HelloGo
+CMD ["/hello/HelloGo"]
 EOF
 
 
