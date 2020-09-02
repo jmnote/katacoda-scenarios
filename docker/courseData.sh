@@ -91,6 +91,8 @@ cd    /root/04_HelloNode
 
 cat <<EOF > app.js
 const http = require('http');
+const hostname = "0.0.0.0"
+const port = 3000
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
@@ -104,8 +106,8 @@ EOF
 cat <<EOF > Dockerfile
 FROM node:12
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
+#COPY package.json ./
+#RUN npm install
 COPY . .
 EXPOSE 3000
 CMD [ "node", "app.js" ]
