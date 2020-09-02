@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-deployment
+  labels:
+    app: httpd-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: httpd-deployment
+  template:
+    metadata:
+      labels:
+        app: httpd-deployment
+    spec:
+      containers:
+      - image: ethos93/go-httpd:v1
+        name: httpd-deployment
+        ports:
+        - containerPort: 80
+          protocol: TCP
