@@ -76,7 +76,13 @@
 
 `cat index.html`{{execute}}
 
-`docker run -d --name web1 -p 8081:80 -v `pwd`/index.html:/usr/share/nginx/html/index.html nginx`{{execute}}
+`pwd`{{execute}}
+
+`echo $PWD`{{execute}}
+
+`echo ${PWD}`{{execute}}
+
+`docker run -d --name web1 -p 8081:80 -v ${PWD}/index.html:/usr/share/nginx/html/index.html nginx`{{execute}}
 
 `docker ps -a`{{execute}}
 
