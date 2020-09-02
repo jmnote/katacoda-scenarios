@@ -1,10 +1,14 @@
 <br>
 
-## kubeconfig (optional)
+## katacoda launch.sh
 
 `which launch.sh`{{execute}}
 
 `cat /usr/bin/launch.sh`{{execute}}
+
+<br>
+
+## kubeconfig (optional)
 
 `kubectl get nodes`{{execute}}
 
