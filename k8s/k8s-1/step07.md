@@ -26,8 +26,6 @@
 
 `kubectl exec -it ubuntu -- bash`{{execute}}
 
-`kubectl exec -it ubuntu -- bash`{{execute}}
-
 `curl httpd-clusterip-service`{{execute}}
 
 `cat /etc/hosts`{{execute}}
