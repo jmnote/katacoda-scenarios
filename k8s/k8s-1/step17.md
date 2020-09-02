@@ -36,7 +36,7 @@
 
 <br>
 
-## apply pv
+## apply pod
 
 `cat 17_pod.yaml`{{execute}}
 
