@@ -18,6 +18,8 @@
 
 `kubectl get pod`{{execute}}
 
+`kubectl get pod --show-labels`{{execute}}
+
 <br>
 
 ## pod 삭제
