@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: mysql
-    image: openshift/mysql-55-centos7
+    image: mysql
     env:
       - name: MYSQL_ROOT_PASSWORD
         value: yourpassword
