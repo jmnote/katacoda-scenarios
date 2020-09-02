@@ -2,7 +2,7 @@
 
 ## liveness
 
-`cd /root/03_pod_liveness`{{execute}}
+`cd /root/03/`{{execute}}
 
 `ll`{{execute}}
 
