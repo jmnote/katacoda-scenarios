@@ -10,11 +10,10 @@
 * k8s-08 (Service) NodePort
 * k8s-09 Ingress
 * k8s-10 (Deployment) Rollout
-* k8s-11 ConfigMap & Secret
-* k8s-12 Volume
-* metric
-* HPA
-
-순서 정의
-
-파일 분리
+* k8s-11 metric
+* k8s-12 HPA
+* k8s-13 ConfigMap
+* k8s-14 Secret
+* k8s-15 Volume
+* k8s-16 Job
+* k8s-17 CronJob
