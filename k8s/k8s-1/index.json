@@ -108,7 +108,7 @@
         {"target": "/root", "file": "13_metrics-server.yaml"},
         {"target": "/root/14", "file": "14_deployment.yaml"},
         {"target": "/root/14", "file": "14_hpa.yaml"},
-        {"target": "/root/14", "file": "14_nodeport.yaml"},
+        {"target": "/root/14", "file": "14_service.yaml"},
         {"target": "/root/15", "file": "15-1_configmap.yaml"},
         {"target": "/root/15", "file": "15-1_deployment.yaml"},
         {"target": "/root/15", "file": "15-2_configmap.yaml"},
