@@ -10,7 +10,7 @@
 
 <br>
 
-## deploy 1
+## apply 1
 
 `kubectl apply -f 06-1_nginx-deployment.yaml.yaml`{{execute}}
 
@@ -32,7 +32,7 @@
 
 <br>
 
-## deploy 2
+## apply 2
 
 `kubectl apply -f 06-2_httpd-deployment.yaml`{{execute}}
 
