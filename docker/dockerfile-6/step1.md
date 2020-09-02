@@ -24,9 +24,9 @@ Terminal 1 + `View HTTP 80`
 
 `cat Dockerfile`{{execute}}
 
-`docker build -t HelloVuetify .`{{execute}}
+`docker build -t hello-vuetify .`{{execute}}
 
-`docker run -d -p 80:80 HelloVuetify`{{execute}}
+`docker run -d --name hello-vuetify1 -p 80:80 hello-vuetify`{{execute}}
 
 `docker ps -a`{{execute}}
 
