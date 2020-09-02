@@ -6,7 +6,7 @@
 
 `ll`{{execute}}
 
-`cat replicaset.yaml`{{execute}}
+`cat 05_replicaset.yaml`{{execute}}
 
 <br>
 
@@ -30,11 +30,9 @@
 
 ## replica 증설
 
-`sed 's/replicas: 3/replicas: 5/g' replicaset.yaml`{{execute}}
+`sed 's/replicas: 3/replicas: 5/g' 05_replicaset.yaml`{{execute}}
 
-`sed 's/replicas: 3/replicas: 5/g' replicaset.yaml -i`{{execute}}
-
-`kubectl apply -f replicaset.yaml`{{execute}}
+`sed 's/replicas: 3/replicas: 5/g' 05_replicaset.yaml | kubectl apply -f -`{{execute}}
 
 `kubectl get replicaset`{{execute}}
 
@@ -44,4 +42,4 @@
 
 ## replicaset 삭제
 
-`kubectl delete -f replicaset.yaml`{{execute}}
+`kubectl delete -f .`{{execute}}
