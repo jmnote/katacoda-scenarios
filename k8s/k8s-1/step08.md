@@ -6,20 +6,58 @@
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 08_httpd-deployment.yaml`{{execute}}
+
+`cat 08_nodeport.yaml`{{execute}}
+
+`cat 08_nodeport2.yaml`{{execute}}
+
+<br>
 
 ## deploy
 
-`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
+`kubectl apply -f .`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
+`kubectl get pod`{{execute}}
 
-`kubectl delete pod POD이름`{{execute}}
+`kubectl get service`{{execute}}
 
-## deploy
+<br>
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
+## curl
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
+`kubectl run ubuntu --image=ubuntu --generator=run-pod/v1 --command -- sleep 180`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
+`kubectl get pod`{{execute}}
+
+`kubectl exec -it ubuntu -- curl httpd-nodeport-service`{{execute}}
+
+`kubectl get service`{{execute}}
+
+`kubectl get node -owide`{{execute}}
+
+`curl 마스터:포트`{{execute}}
+
+`curl 노드01:포트`{{execute}}
+
+<br>
+
+## deploy 2
+
+`diff 08_nodeport.yaml 08_nodeport2.yaml`{{execute}}
+
+`kubectl apply -f 08_nodeport2.yaml`{{execute}}
+
+`kubectl get node -owide`{{execute}}
+
+`kubectl get service`{{execute}}
+
+`curl 마스터:32000`{{execute}}
+
+`curl 노드01:32000`{{execute}}
+
+<br>
+
+## delete
+
+`kubectl delete -f .`{{execute}}
