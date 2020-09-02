@@ -1,46 +1,25 @@
 <br>
 
-## Pod
+## yaml
 
-`cd /root/02_kubectl_pod`{{execute}}
+`cd /root/15/`{{execute}}
 
 `ll`{{execute}}
 
-`cat web1.yaml`{{execute}}
+`cat deploy.yaml`{{execute}}
 
-`kubectl apply -f web1.yaml`{{execute}}
+## deploy
 
-`kubectl get pod`{{execute}}
+`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
 
-`kubectl get pod -owide`{{execute}}
+`kubectl apply -f deploy.yaml`{{execute}}
 
-`kubectl exec -it web1 bash`{{execute}}
+`kubectl delete pod POD이름`{{execute}}
 
-`exit`{{execute}}
+## deploy
 
-`kubectl exec -it web1 -- bash`{{execute}}
+`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
 
-`curl localhost`{{execute}}
+`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
 
-`exit`{{execute}}
-
-`kubectl delete pod web1`{{execute}}
-
-<br>
-
-## kubectl
-
-`kubectl create -f web1.yaml`{{execute}}
-
-`kubectl delete -f web1.yaml`{{execute}}
-
-`kubectl apply -f web1.yaml`{{execute}}
-
-`kubectl delete -f web1.yaml`{{execute}}
-
-`kubectl apply -f .`{{execute}}
-
-`kubectl delete -f .`{{execute}}
-
-
-Container와 Pod의 차이는?
+`kubectl apply -f deploy.yaml`{{execute}}
