@@ -38,6 +38,8 @@
 
 `kubectl exec -it curlpod -- curl httpd-clusterip-service`{{execute}}
 
+`for i in {120..0}; do echo $i; sleep 1; done`{{execute}}
+
 <br>
 
 ## delete
