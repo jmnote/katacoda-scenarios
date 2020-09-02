@@ -41,6 +41,11 @@ spec:
       labels:
         app: nginx-ingress
     spec:
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
+      tolerations:
+      - effect: NoSchedule
+        operator: Exists
       serviceAccountName: nginx-ingress
       containers:
       - image: nginx/nginx-ingress:edge
