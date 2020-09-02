@@ -2,9 +2,9 @@
 
 `docker run --name web1 nginx`{{execute}}
 
-`docker ps -a`{{execute}}
-
 `^C`{{execute ctrl-seq}}
+
+`docker ps -a`{{execute}}
 
 `docker rm -f web1`{{execute}}
 
