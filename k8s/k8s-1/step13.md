@@ -1,25 +1,56 @@
 <br>
 
+## before
+
+`kubectl top pod`{{execute}}
+
+`kubectl top node`{{execute}}
+
+<br>
+
+## metrics server (admin)
+
+`cd /root/`{{execute}}
+
+`ll`{{execute}}
+
+`cat 13_metrics-server.yaml`{{execute}}
+
+`cat 13_metrics-server.yaml | grep kind`{{execute}}
+
+`kubectl apply -f 13_metrics-server.yaml`{{execute}}
+
+`kubectl get all -n nginx-ingress`{{execute}
+
+<br>
+
+## after
+
+`kubectl top pod`{{execute}}
+
+`kubectl top node`{{execute}}
+
+<br>
+
 ## yaml
 
 `cd /root/13/`{{execute}}
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 13_deployment.yaml`{{execute}}
+
+<br>
 
 ## deploy
 
-`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
+`kubectl top pod`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
+`kubectl top node`{{execute}}
 
-`kubectl delete pod POD이름`{{execute}}
+<br>
 
-## deploy
+## delete
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
+`kubectl delete -f .`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
-
-`kubectl apply -f deploy.yaml`{{execute}}
