@@ -16,6 +16,10 @@
 
 `watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
 
+다른 탭에서...
+
+`cd /root/07/`{{execute}}
+
 `kubectl apply -f .`{{execute}}
 
 <br>
