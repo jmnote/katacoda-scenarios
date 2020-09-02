@@ -52,7 +52,7 @@ Terminal + `View HTTP port 80 on Host 1`
 
 <br>
 
-## network (optional)
+## network (중요도 )
 
 `docker network ls`{{execute}}
 
