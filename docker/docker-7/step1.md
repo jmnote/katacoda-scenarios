@@ -6,6 +6,8 @@ docker run -v -e
 
 `docker run -d --name mysql1 -v /mydata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=hello mysql`{{execute}}
 
+`docker ps -a`{{execute}}
+
 `docker exec -it mysql1 bash`{{execute}}
 
 `mount | grep /var/lib/mysql`{{execute}}
@@ -32,6 +34,8 @@ docker run -v -e
 `ll /mydata`{{execute}}
 
 `docker run -d --name mysql2 -v /mydata:/var/lib/mysql  -e MYSQL_ROOT_PASSWORD=hello mysql`{{execute}}
+
+`docker ps -a`{{execute}}
 
 `docker exec -it mysql2 bash`{{execute}}
 
