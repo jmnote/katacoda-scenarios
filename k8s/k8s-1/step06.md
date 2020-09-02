@@ -34,8 +34,18 @@
 
 ## deploy 2
 
+`kubectl apply -f 06-2_httpd-deployment.yaml`{{execute}}
+
+`kubectl get deploy,rs,pod`{{execute}}
+
 `watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
+`sed 's/go-httpd:v1/go-httpd:v2/g' 06-2_httpd-deployment.yaml`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml | kubectl -f -`{{execute}}
+`sed 's/go-httpd:v1/go-httpd:v2/g' 06-2_httpd-deployment.yaml | kubectl -f -`{{execute}}
+
+<br>
+
+## delete
+
+`kubectl delete -f .`{{execute}}
