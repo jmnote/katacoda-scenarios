@@ -81,6 +81,11 @@
       "course_id":   "dockerfile-7",
       "title":       "dockerfile-7",
       "description": "dockerfile-7"
+    },
+    {
+      "course_id":   "dockerfile-8",
+      "title":       "dockerfile-8",
+      "description": "dockerfile-8"
     }
   ]
 }
