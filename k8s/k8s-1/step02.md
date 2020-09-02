@@ -6,13 +6,13 @@
 
 `ll`{{execute}}
 
-`cat web1.yaml`{{execute}}
+`cat 02_web1.yaml`{{execute}}
 
 <br>
 
 ## apply
 
-`kubectl apply -f web1.yaml`{{execute}}
+`kubectl apply -f 02_web1.yaml`{{execute}}
 
 `kubectl get pod`{{execute}}
 
@@ -34,13 +34,13 @@
 
 ## kubectl
 
-`kubectl create -f web1.yaml`{{execute}}
+`kubectl create -f 02_web1.yaml`{{execute}}
 
-`kubectl delete -f web1.yaml`{{execute}}
+`kubectl delete -f 02_web1.yaml`{{execute}}
 
-`kubectl apply -f web1.yaml`{{execute}}
+`kubectl apply -f 02_web1.yaml`{{execute}}
 
-`kubectl delete -f web1.yaml`{{execute}}
+`kubectl delete -f 02_web1.yaml`{{execute}}
 
 `kubectl apply -f .`{{execute}}
 
