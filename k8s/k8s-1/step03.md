@@ -16,11 +16,15 @@
 
 `kubectl get pod web1`{{execute}}
 
+`kubectl describe pod web1`{{execute}}
+
 `kubectl exec -it web1 -- curl localhost`{{execute}}
 
 `kubectl exec -it web1 -- supervisorctl status`{{execute}}
 
 `kubectl exec -it web1 -- supervisorctl stop nginx`{{execute}}
+
+`kubectl get pod web1`{{execute}}
 
 `kubectl describe pod web1`{{execute}}
 
