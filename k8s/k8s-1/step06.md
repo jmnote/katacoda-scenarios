@@ -14,9 +14,15 @@
 
 `kubectl apply -f 06-1_nginx-deployment.yaml.yaml`{{execute}}
 
-`kubectl delete pod deploy,rs,pod`{{execute}}
+`kubectl get deploy,rs,pod`{{execute}}
 
-`kubectl delete pod POD이름`{{execute}}
+`kubectl get pod | grep nginx | head -1 | awk '{print $1}'`{{execute}}
+
+`POD=$(kubectl get pod | grep nginx | head -1 | awk '{print $1}')`{{execute}}
+
+`kubectl delete pod $POD`{{execute}}
+
+`kubectl get deploy,rs,pod`{{execute}}
 
 <br>
 
