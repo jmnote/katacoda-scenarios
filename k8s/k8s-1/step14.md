@@ -6,20 +6,18 @@
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 14_deployment.yaml`{{execute}}
+
+`cat 14_nodeport.yaml`{{execute}}
+
+`cat 14_hpa.yaml`{{execute}}
+
+<br>
 
 ## deploy
 
-`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
+`kubectl apply -f .`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
+`watch -n1 'kubectl get hpa,deploy,rs,pod'`{{execute}}
 
-`kubectl delete pod POD이름`{{execute}}
-
-## deploy
-
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
-
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
-
-`kubectl apply -f deploy.yaml`{{execute}}
+`while true; do curl httpd-nodeport-service; done`{{execute}}
