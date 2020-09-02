@@ -109,7 +109,7 @@
         {"target": "/root/15", "file": "15-2_pod.yaml"},
         {"target": "/root/16", "file": "16_pod.yaml"},
         {"target": "/root/16", "file": "16_secret.yaml"},
-        {"target": "/root/17", "file": "17_nfs-server-manaul.sh"},
+        {"target": "/root", "file": "17_nfs-server-manaul.sh"},
         {"target": "/root/17", "file": "17_pod.yaml"},
         {"target": "/root/17", "file": "17_pvc.yaml"}
       ]
