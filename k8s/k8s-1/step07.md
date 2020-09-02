@@ -24,6 +24,8 @@
 
 `kubectl run ubuntu --image=ubuntu --generator=run-pod/v1 --command -- sleep 180`{{execute}}
 
+`kubectl get pod`{{execute}}
+
 `kubectl exec -it ubuntu -- bash`{{execute}}
 
 `curl httpd-clusterip-service`{{execute}}
