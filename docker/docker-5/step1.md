@@ -15,6 +15,8 @@
 
 `docker run -d --name web2 nginx`{{execute}}
 
+`docker ps -a`{{execute}}
+
 `docker exec -it web2 bash`{{execute}}
 
 `curl localhost`{{execute}}
