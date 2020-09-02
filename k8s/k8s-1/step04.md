@@ -6,9 +6,13 @@
 
 `ll`{{execute}}
 
-`cat counter.yaml`{{execute}}
+`cat 04_counter.yaml`{{execute}}
 
-`kubectl apply -f counter.yaml`{{execute}}
+<br>
+
+## apply
+
+`kubectl apply -f 04_counter.yaml`{{execute}}
 
 `kubectl get pod counter`{{execute}}
 
@@ -30,7 +34,6 @@
 
 `kubectl exec -it counter -c count-log-2 -- ps -ef`{{execute}}
 
-
 <br>
 
 ## log
@@ -45,6 +48,6 @@
 
 <br>
 
-## 삭제
+## delete
 
-`kubectl delete -f counter.yaml`{{execute}}
+`kubectl delete -f .`{{execute}}
