@@ -48,6 +48,14 @@
 
 <br>
 
+## 축약형
+
+`kubectl api-resources`{{execute}}
+
+`kubectl api-resources | egrep 'Pod|ReplicaSet|Deployment|Service|Ingress'`{{execute}}
+
+<br>
+
 ## k8s apiserver (admin)
 
 `kubectl config view`{{execute}}
