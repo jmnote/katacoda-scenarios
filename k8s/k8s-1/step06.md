@@ -12,7 +12,7 @@
 
 ## apply 1
 
-`kubectl apply -f 06-1_nginx-deployment.yaml.yaml`{{execute}}
+`kubectl apply -f 06-1_nginx-deployment.yaml`{{execute}}
 
 `kubectl get deploy,rs,pod`{{execute}}
 
