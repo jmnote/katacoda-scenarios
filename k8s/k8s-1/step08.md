@@ -14,7 +14,7 @@
 
 <br>
 
-## deploy 1
+## service 1
 
 `kubectl apply -f .`{{execute}}
 
@@ -42,7 +42,7 @@
 
 <br>
 
-## deploy 2
+## service 2
 
 `diff 08_nodeport.yaml 08_nodeport2.yaml`{{execute}}
 
