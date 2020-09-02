@@ -11,9 +11,9 @@
 
 `cat Dockerfile`{{execute}}
 
-`docker build -t HelloJava:v1 .`{{execute}}
+`docker build -t hello-java:v1 .`{{execute}}
 
-`docker run HelloJava:v1`{{execute}}
+`docker run hello-java:v1`{{execute}}
 
 
 ## HelloJava 2
@@ -26,8 +26,8 @@
 
 `cat Dockerfile`{{execute}}
 
-`docker build -t HelloJava:v2 .`{{execute}}
+`docker build -t hello-java:v2 .`{{execute}}
 
-`docker run HelloJava:v2`{{execute}}
+`docker run hello-java:v2`{{execute}}
 
 `docker images`{{execute}}
