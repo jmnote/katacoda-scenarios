@@ -1,25 +1,44 @@
 <br>
 
-## yaml
+## ingress controller (admin)
 
 `cd /root/09/`{{execute}}
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 09_ingress-controller.yaml`{{execute}}
+
+`cat 09_ingress-controller.yaml | grep kind`{{execute}}
+
+`kubectl apply -f 09_ingress-controller.yaml`{{execute}}
+
+`kubectl get all -n nginx-ingress`{{execute}
+
+<br>
+
+## yaml
+
+`ll`{{execute}}
+
+`cat 09_httpd-deployment.yaml`{{execute}}
+
+`cat 09_service.yaml`{{execute}}
+
+`cat 09_ingress.yaml`{{execute}}
+
+<br>
 
 ## deploy
 
-`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
+`kubectl apply -f .`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
+<br>
 
-`kubectl delete pod POD이름`{{execute}}
+## delete
 
-## deploy
+`kubectl delete -f 09_httpd-deployment.yaml`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
+`kubectl delete -f 09_service.yaml`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
+`kubectl delete -f 09_ingress.yaml`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
