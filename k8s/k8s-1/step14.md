@@ -18,9 +18,13 @@
 
 `kubectl apply -f .`{{execute}}
 
-`watch -n1 'kubectl get hpa,deploy,rs,pod'`{{execute}}
+`watch 'kubectl get hpa,deploy,rs,pod; echo; kubectl top pod'`{{execute}}
 
-`while true; do curl httpd-nodeport-service; done`{{execute}}
+다른 탭에서...
+
+`while true; do curl localhost:32000; done`{{execute}}
+
+원래 탭 확인
 
 <br>
 
