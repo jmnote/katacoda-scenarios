@@ -6,20 +6,22 @@
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 11_job.yaml`{{execute}}
 
-## deploy
+<br>
 
-`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
+## apply
 
-`kubectl apply -f deploy.yaml`{{execute}}
+`kubectl apply -f .`{{execute}}
 
-`kubectl delete pod POD이름`{{execute}}
+`kubectl get job,pod`{{execute}}
 
-## deploy
+`kubectl logs pod/pi-rwp9l`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
+`kubectl logs pod/pi-rwp9l | wc`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
+<br>
 
-`kubectl apply -f deploy.yaml`{{execute}}
+## delete
+
+`kubectl delete -f .`{{execute}}
