@@ -16,11 +16,13 @@
 
 `kubectl apply -f 15-1_deployment.yaml`{{execute}}
 
-`kubectl get pod`{{execute}}
+`kubectl get pod | grep nginx`{{execute}}
 
-`kubectl describe pod`{{execute}}
+`kubectl get pod | grep nginx | head -1 | awk '{print $1}'`{{execute}}
 
-`kubectl delete -f .`{{execute}}
+`POD=$(kubectl get pod | grep nginx | head -1 | awk '{print $1}')`{{execute}}
+
+`kubectl describe pod ${POD}`{{execute}}
 
 <br>
 
@@ -32,9 +34,7 @@
 
 `kubectl describe cm nginx-configmap`{{execute}}
 
-`kubectl apply -f 15-1_deployment.yaml`{{execute}}
-
-`kubectl get pod`{{execute}}
+`kubectl get pod | grep nginx`{{execute}}
 
 `kubectl get pod | grep nginx | head -1 | awk '{print $1}'`{{execute}}
 
