@@ -14,6 +14,8 @@
 
 `kubectl get all -n nginx-ingress`{{execute}}
 
+`kubectl get pod -n nginx-ingress -owide`{{execute}}
+
 <br>
 
 ## yaml
