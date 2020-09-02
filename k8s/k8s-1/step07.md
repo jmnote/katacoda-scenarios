@@ -31,3 +31,9 @@
 `cat /etc/hosts`{{execute}}
 
 `exit`{{execute}}
+
+<br>
+
+## delete
+
+`kubectl delete -f .`{{execute}}
