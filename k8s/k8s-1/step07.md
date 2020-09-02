@@ -32,7 +32,7 @@
 
 `cat /etc/hosts`{{execute}}
 
-`exit`{{execute}}
+`exit`
 
 `kubectl exec -it ubuntu -- curl httpd-clusterip-service`{{execute}}
 
