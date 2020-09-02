@@ -50,11 +50,11 @@ cat <<EOF > Dockerfile
 FROM openjdk:8 as build-stage
 COPY HelloJava.java /app/
 WORKDIR /app
-RUN javac HelloDocker.java
+RUN javac HelloJava.java
 FROM openjdk:8-jre
-COPY --from=build-stage /app/HelloDocker.class /app/HelloDocker.class
+COPY --from=build-stage /app/HelloJava.class /app/HelloJava.class
 WORKDIR /app
-CMD ["java","HelloDocker"]
+CMD ["java","HelloJava"]
 EOF
 
 ###
