@@ -88,6 +88,7 @@
         {"target": "/root/06", "file": "06-2_httpd-deployment.yaml"},
         {"target": "/root/07", "file": "07_httpd-deployment.yaml"},
         {"target": "/root/07", "file": "07_service.yaml"},
+        {"target": "/root", "file": "07_service_2.yaml"},
         {"target": "/root/08", "file": "08_httpd-deployment.yaml"},
         {"target": "/root/08", "file": "08_nodeport.yaml"},
         {"target": "/root/08", "file": "08_nodeport2.yaml"},
