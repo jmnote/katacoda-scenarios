@@ -9,7 +9,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: httpd-deployment
+    name: php-apache
   metrics:
   - type: Resource
     resource:
