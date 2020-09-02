@@ -12,7 +12,7 @@
 
 `kubectl apply -f 09_ingress-controller.yaml`{{execute}}
 
-`kubectl get all -n nginx-ingress`{{execute}
+`kubectl get all -n nginx-ingress`{{execute}}
 
 <br>
 
