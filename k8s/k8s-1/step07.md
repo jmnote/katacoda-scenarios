@@ -32,6 +32,8 @@
 
 `exit`{{execute}}
 
+`kubectl exec -it ubuntu -- curl httpd-clusterip-service`{{execute}}
+
 <br>
 
 ## delete
