@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: myconfigmap
 data:
-  Hello ConfigMap!
+  index.html: |
+    Hello ConfigMap!
