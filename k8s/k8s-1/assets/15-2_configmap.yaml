@@ -5,3 +5,7 @@ metadata:
 data:
   index.html: |
     Hello ConfigMap!
+  lorem.txt: |
+    Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
