@@ -70,6 +70,8 @@
 
 `ls -alF /usr/share/nginx/html/`{{execute}}
 
+`mount | grep data`{{execute}}
+
 `exit`
 
 <br>
