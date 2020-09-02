@@ -6,20 +6,30 @@
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 07_httpd-deployment.yaml`{{execute}}
+
+`cat 07_service.yaml`{{execute}}
+
+<br>
 
 ## deploy
 
 `watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
+`kubectl apply -f .`{{execute}}
 
-`kubectl delete pod POD이름`{{execute}}
+<br>
 
-## deploy
+## curl
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
+`kubectl run ubuntu --image=ubuntu --generator=run-pod/v1 --command -- sleep 180`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
+`kubectl exec -it ubuntu -- bash`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
+`kubectl exec -it ubuntu -- bash`{{execute}}
+
+`curl httpd-clusterip-service`{{execute}}
+
+`cat /etc/hosts`{{execute}}
+
+`exit`{{execute}}
