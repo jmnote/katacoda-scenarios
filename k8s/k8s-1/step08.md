@@ -26,11 +26,11 @@
 
 ## curl 1
 
-`kubectl run ubuntu --image=ubuntu --generator=run-pod/v1 --command -- sleep 180`{{execute}}
+kubectl run curlpod --image=radial/busyboxplus:curl --generator=run-pod/v1 --command sleep 36000{{execute}}
 
 `kubectl get pod`{{execute}}
 
-`kubectl exec -it ubuntu -- curl httpd-nodeport-service`{{execute}}
+`kubectl exec -it curlpod -- curl httpd-nodeport-service`{{execute}}
 
 `kubectl get service`{{execute}}
 
@@ -39,6 +39,8 @@
 `curl 마스터:포트`{{execute}}
 
 `curl 노드01:포트`{{execute}}
+
+`curl localhost:포트`{{execute}}
 
 <br>
 
@@ -57,6 +59,8 @@
 `curl 마스터:32000`{{execute}}
 
 `curl 노드01:32000`{{execute}}
+
+`curl localhost:32000`{{execute}}
 
 <br>
 
