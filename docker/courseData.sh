@@ -22,7 +22,7 @@ cd    /root/02-1_HelloJava
 cat <<EOF > HelloJava.java
 public class HelloJava {
 	public static void main(String[] args) {
-		System.out.println("Hello Java");
+		System.out.println("Hello Java 1");
 	}
 }
 EOF
@@ -41,7 +41,7 @@ cd    /root/02-2_HelloJava2
 cat <<EOF > HelloJava.java
 public class HelloJava {
 	public static void main(String[] args) {
-		System.out.println("Hello Java");
+		System.out.println("Hello Java 2");
 	}
 }
 EOF
