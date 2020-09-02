@@ -24,6 +24,8 @@
 
 `kubectl get deploy,rs,pod`{{execute}}
 
+`kubectl delete -f 06-1_nginx-deployment.yaml`{{execute}}
+
 <br>
 
 ## yaml 2
