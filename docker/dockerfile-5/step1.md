@@ -42,9 +42,9 @@ Terminal 1 + `View HTTP port 80 on Host 1`
 
 `cat Dockerfile`{{execute}}
 
-`docker build -t HelloDjango .`{{execute}}
+`docker build -t hello-django .`{{execute}}
 
-`docker run -d -p 80:80 HelloDjango`{{execute}}
+`docker run -d --name hello-django1 -p 80:80 hello-django`{{execute}}
 
 `docker ps -a`{{execute}}
 
