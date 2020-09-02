@@ -48,11 +48,17 @@
 
 <br>
 
-## 축약형
+## 리소스
 
 `kubectl api-resources`{{execute}}
 
 `kubectl api-resources | egrep 'Pod|ReplicaSet|Deployment|Service|Ingress'`{{execute}}
+
+`kubectl get nodes`{{execute}}
+
+`kubectl get node`{{execute}}
+
+`kubectl get no`{{execute}}
 
 <br>
 
