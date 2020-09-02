@@ -42,6 +42,12 @@
 
 `watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
 
+master 탭에서...
+
+`cd /root/06/`{{execute}}
+
+`cat 06-2_httpd-deployment.yaml`{{execute}}
+
 `sed 's/go-httpd:v1/go-httpd:v2/g' 06-2_httpd-deployment.yaml`{{execute}}
 
 `sed 's/go-httpd:v1/go-httpd:v2/g' 06-2_httpd-deployment.yaml | kubectl -f -`{{execute}}
