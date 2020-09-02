@@ -64,9 +64,13 @@
 
 `kubectl get pod`{{execute}}
 
-`kubectl exec -it nginx -- curl localhost`{{execute}}
+`kubectl exec -it nginx -- bash`{{execute}}
 
-`kubectl exec -it nginx -- ls -alF /usr/share/nginx/html/`{{execute}}
+`curl localhost`{{execute}}
+
+`ls -alF /usr/share/nginx/html/`{{execute}}
+
+`exit`{{execute}}
 
 <br>
 
