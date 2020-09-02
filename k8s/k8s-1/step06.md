@@ -1,25 +1,35 @@
 <br>
 
-## yaml
+## yaml 1
 
 `cd /root/06/`{{execute}}
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 06-1_nginx-deployment.yaml`{{execute}}
 
-## deploy
+<br>
 
-`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
+## deploy 1
 
-`kubectl apply -f deploy.yaml`{{execute}}
+`kubectl apply -f 06-1_nginx-deployment.yaml.yaml`{{execute}}
+
+`kubectl delete pod deploy,rs,pod`{{execute}}
 
 `kubectl delete pod POD이름`{{execute}}
 
-## deploy
+<br>
+
+## yaml 2
+
+`cat 06-2_httpd-deployment.yaml`{{execute}}
+
+<br>
+
+## deploy 2
+
+`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
 
 `sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
-
-`kubectl apply -f deploy.yaml`{{execute}}
+`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml | kubectl -f -`{{execute}}
