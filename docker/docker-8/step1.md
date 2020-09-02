@@ -12,6 +12,8 @@
 
 `docker run -d --name wordpress1 -p 80:80 wordpress`{{execute}}
 
+`docker inspect mysql1 | grep IPAddress`{{execute}}
+
 Terminal + `View HTTP port 80 on Host 1`
 
 `docker exec -it wordpress1 bash`{{execute}}
@@ -19,8 +21,6 @@ Terminal + `View HTTP port 80 on Host 1`
 `cat /etc/hosts`{{execute}}
 
 `exit`{{execute}}
-
-`docker inspect mysql1 | grep IPAddress`{{execute}}
 
 <br>
 
@@ -35,6 +35,8 @@ Terminal + `View HTTP port 80 on Host 1`
 `docker run -d --name wordpress1 --link mysql1 -p 80:80 wordpress`{{execute}}
 
 `docker inspect mysql1 | grep IPAddress`{{execute}}
+
+Terminal + `View HTTP port 80 on Host 1`
 
 `docker exec -it wordpress1 bash`{{execute}}
 
