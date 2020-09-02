@@ -14,7 +14,7 @@
 
 <br>
 
-## deploy
+## deploy 1
 
 `kubectl apply -f .`{{execute}}
 
@@ -24,7 +24,7 @@
 
 <br>
 
-## curl
+## curl 1
 
 `kubectl run ubuntu --image=ubuntu --generator=run-pod/v1 --command -- sleep 180`{{execute}}
 
