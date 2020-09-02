@@ -6,6 +6,8 @@
 
 `kubectl top node`{{execute}}
 
+`kubectl api-resources | grep metrics`{{execute}}
+
 <br>
 
 ## metrics server (admin)
@@ -18,9 +20,13 @@
 
 `cat 13_metrics-server.yaml | grep kind`{{execute}}
 
+`cat 13_metrics-server.yaml | egrep '^kind:|^  name:'`{{execute}}
+
 `kubectl apply -f 13_metrics-server.yaml`{{execute}}
 
-`kubectl get all -n nginx-ingress`{{execute}
+`kubectl get pod -n kube-system | grep metrics`{{execute}}
+
+`kubectl api-resources | grep metrics`{{execute}}
 
 <br>
 
@@ -30,27 +36,4 @@
 
 `kubectl top node`{{execute}}
 
-<br>
-
-## yaml
-
-`cd /root/13/`{{execute}}
-
-`ll`{{execute}}
-
-`cat 13_deployment.yaml`{{execute}}
-
-<br>
-
-## deploy
-
-`kubectl top pod`{{execute}}
-
-`kubectl top node`{{execute}}
-
-<br>
-
-## delete
-
-`kubectl delete -f .`{{execute}}
-
+`kubectl top pod -A`{{execute}}
