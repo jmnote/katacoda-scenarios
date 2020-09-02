@@ -9,5 +9,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: webapp1-svc
+          serviceName: httpd-clusterip-service
           servicePort: 80
