@@ -21,3 +21,9 @@
 `watch -n1 'kubectl get hpa,deploy,rs,pod'`{{execute}}
 
 `while true; do curl httpd-nodeport-service; done`{{execute}}
+
+<br>
+
+## delete
+
+`kubectl delete -f .`{{execute}}
