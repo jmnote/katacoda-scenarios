@@ -1,63 +1,51 @@
 <br>
 
-## no link
+## run
 
 `docker run -d --name mysql1 -e MYSQL_ROOT_PASSWORD=hello -e MYSQL_DATABASE=wordpress mysql`{{execute}}
-
-`docker exec -it mysql1 bash`{{execute}}
-
-`mysql -uroot -phello`{{execute}}
-
-`SHOW DATABASES;`{{execute}}
-
-`use wordpress`{{execute}}
-
-`SHOW TABLES;`{{execute}}
 
 `docker run -d --name wordpress1 -p 80:80 wordpress`{{execute}}
 
-`docker inspect mysql1 | grep IPAddress`{{execute}}
+<br>
 
-Terminal + `View HTTP port 80 on Host 1`
+## top
 
-`docker exec -it wordpress1 bash`{{execute}}
+`docker top wordpress1`{{execute}}
 
-`cat /etc/hosts`{{execute}}
+`docker exec -it wordpress1 ps -ef`{{execute}}
 
-`exit`{{execute}}
+`docker top mysql1`{{execute}}
+
+`docker exec -it mysql1 ps -ef`{{execute}}
+
+`docker exec -it mysql1 bash`{{execute}}
 
 <br>
 
-## link
+## stats
 
-`docker rm -f $(docker ps -aq)`{{execute}}
+`docker stats`{{execute}}
 
-`docker run -d --name mysql1 -e MYSQL_ROOT_PASSWORD=hello -e MYSQL_DATABASE=wordpress mysql`{{execute}}
+Terminal 1에서...
 
-`docker exec -it mysql1 mysql -uroot -phello -e 'SHOW DATABASES'`{{execute}}
-
-`docker exec -it mysql1 mysql -uroot -phello wordpress -e 'SHOW TABLES'`{{execute}}
-
-`docker run -d --name wordpress1 --link mysql1 -p 80:80 wordpress`{{execute}}
-
-`docker inspect mysql1 | grep IPAddress`{{execute}}
-
-Terminal + `View HTTP port 80 on Host 1`
-
-`docker exec -it wordpress1 bash`{{execute}}
-
-`cat /etc/hosts`{{execute}}
-
-`exit`{{execute}}
+`docker info | egrep 'CPUs|Total Memory'`{{execute}}
 
 <br>
 
-## network (중요도 낮음)
+## stats 2
 
-`docker network ls`{{execute}}
+`while :; do docker stats --no-stream --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"; sleep .5; done`{{execute}}
 
-`docker network create mynet`{{execute}}
+Terminal 1에서...
 
-`docker network ls`{{execute}}
+`docker run --name stress --rm -it progrium/stress --timeout 20s --cpu 2`{{execute}}
 
-`docker run -d --network mynet ubuntu`{{execute}}
+`docker run --cpus=1 --name stress --rm -it progrium/stress --timeout 20s --cpu 2`{{execute}}
+
+`docker run -m 50M --name stress --rm -it progrium/stress --timeout 20s --vm 2 --vm-bytes 24M`{{execute}}
+
+`docker run -m 50M --name stress --rm -it progrium/stress --timeout 20s --vm 2 --vm-bytes 25M`{{execute}}
+
+`sysctl vm.swappiness`{{execute}}
+
+`docker run -m 50M --memory-swappiness 0 --name stress --rm -it progrium/stress --timeout 20s --vm 2 --vm-bytes 25M`{{execute}}
