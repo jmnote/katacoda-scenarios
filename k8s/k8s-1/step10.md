@@ -6,20 +6,42 @@
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 10_deployment_v1.yaml`{{execute}}
+
+`cat 10_deployment_v2.yaml`{{execute}}
+
+`cat 10_service.yaml`{{execute}}
 
 ## deploy
 
-`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
+`kubectl apply -f 10_deployment_v1.yaml`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
+`kubectl apply -f 10_service.yaml`{{execute}}
 
-`kubectl delete pod POD이름`{{execute}}
+`kubectl get pod`{{execute}}
 
-## deploy
+`kubectl exec -it curlpod -- curl httpd-nodeport-service`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
+`while sleep 0.5; do kubectl exec -it curlpod -- curl httpd-nodeport-service; done{{execute}}`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
+다른 탭에서...
 
-`kubectl apply -f deploy.yaml`{{execute}}
+`cd /root/10/`{{execute}}
+
+`kubectl apply -f 10_deployment_v2.yaml`{{execute}}
+
+원래 탭 확인
+
+## rollout
+
+다른 탭에서...
+
+`kubectl rollout history deployment httpd-deployment`{{execute}}
+
+`kubectl rollout history deployment httpd-deployment --revision=1`{{execute}} 
+
+`kubectl rollout history deployment httpd-deployment --revision=2`{{execute}} 
+
+`kubectl rollout undo deployment httpd-deployment --to-revision=1`{{execute}}
+
+원래 탭 확인
