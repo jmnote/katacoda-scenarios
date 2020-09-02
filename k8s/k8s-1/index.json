@@ -90,6 +90,7 @@
         {"target": "/root/07", "file": "07_service.yaml"},
         {"target": "/root/08", "file": "08_httpd-deployment.yaml"},
         {"target": "/root/08", "file": "08_nodeport.yaml"},
+        {"target": "/root/08", "file": "08_nodeport2.yaml"},
         {"target": "/root/09", "file": "09_httpd-deployment.yaml"},
         {"target": "/root/09", "file": "09_ingress-controller.yaml"},
         {"target": "/root/09", "file": "09_ingress.yaml"},
