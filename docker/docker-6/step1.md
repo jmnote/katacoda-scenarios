@@ -82,6 +82,6 @@
 
 <br>
 
-## inspect
+## rm
 
 `docker rm -f $(docker ps -aq)`{{execute}}
