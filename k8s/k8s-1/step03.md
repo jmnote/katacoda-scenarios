@@ -1,14 +1,18 @@
 <br>
 
-## liveness
+## yaml
 
 `cd /root/03/`{{execute}}
 
 `ll`{{execute}}
 
-`cat web1.yaml`{{execute}}
+`cat 03_web1.yaml`{{execute}}
 
-`kubectl apply -f web1.yaml`{{execute}}
+<br>
+
+## apply
+
+`kubectl apply -f 03_web1.yaml`{{execute}}
 
 `kubectl get pod web1 -w`{{execute}}
 
@@ -22,6 +26,8 @@
 
 `kubectl get event | grep web1`{{execute}}
 
+<br>
 
-liveness와 readiness의 차이는?
+## delete
 
+`kubectl delete -f .`{{execute}}
