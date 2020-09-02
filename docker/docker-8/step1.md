@@ -10,6 +10,10 @@
 
 `SHOW DATABASES;`{{execute}}
 
+`use wordpress`{{execute}}
+
+`SHOW TABLES;`{{execute}}
+
 `docker run -d --name wordpress1 -p 80:80 wordpress`{{execute}}
 
 `docker inspect mysql1 | grep IPAddress`{{execute}}
