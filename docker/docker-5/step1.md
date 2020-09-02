@@ -95,3 +95,9 @@
 `ll /var/lib/docker/containers/*/*.log`{{execute}}
 
 `cat /var/lib/docker/containers/*/*.log`{{execute}}
+
+컨테이너가 제거되면 로그는?
+
+`docker rm -f $(docker ps -aq)`{{execute}}
+
+`ll /var/lib/docker/containers`{{execute}}
