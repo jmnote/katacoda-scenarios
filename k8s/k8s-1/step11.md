@@ -16,9 +16,13 @@
 
 `kubectl get job,pod`{{execute}}
 
-`kubectl logs pod/pi-rwp9l`{{execute}}
+`kubectl get pod | grep pi | awk '{print $1}'`{{execute}}
 
-`kubectl logs pod/pi-rwp9l | wc`{{execute}}
+`POD=$(kubectl get pod | grep pi | awk '{print $1}')`{{execute}}
+
+`kubectl logs ${POD}`{{execute}}
+
+`kubectl logs ${POD} | wc`{{execute}}
 
 <br>
 
