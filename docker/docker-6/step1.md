@@ -1,5 +1,4 @@
-Optional...
-
+<br>
 
 ## Host
 
@@ -9,6 +8,7 @@ Optional...
 
 `uptime`{{execute}}
 
+<br>
 
 ## Exited
 
@@ -18,6 +18,7 @@ Optional...
 
 `docker ps -a`{{execute}}
 
+<br>
 
 ## Up
 
@@ -27,6 +28,7 @@ Optional...
 
 `docker ps -a`{{execute}}
 
+<br>
 
 ## exec 1
 
@@ -46,6 +48,7 @@ Optional...
 
 `ls -alF --color /`{{execute}}
 
+<br>
 
 ## exec 2
 
@@ -65,6 +68,7 @@ Terminal 1에서...
 
 `ls -alF --color /`{{execute}}
 
+<br>
 
 ## inspect
 
