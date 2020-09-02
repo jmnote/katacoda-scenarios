@@ -53,6 +53,8 @@ Terminal 1에서...
 
 `docker exec -it ubuntu2 bash`{{execute}}
 
+`docker exec -it ubuntu2 sh`{{execute}}
+
 `cat /etc/os-release`{{execute}}
 
 `ps -ef`{{execute}}
