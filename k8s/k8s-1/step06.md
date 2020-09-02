@@ -50,7 +50,7 @@ master 탭에서...
 
 `sed 's/go-httpd:v1/go-httpd:v2/g' 06-2_httpd-deployment.yaml`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' 06-2_httpd-deployment.yaml | kubectl -f -`{{execute}}
+`sed 's/go-httpd:v1/go-httpd:v2/g' 06-2_httpd-deployment.yaml | kubectl apply -f -`{{execute}}
 
 <br>
 
