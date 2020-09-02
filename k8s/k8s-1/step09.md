@@ -2,7 +2,7 @@
 
 ## ingress controller (admin)
 
-`cd /root/09/`{{execute}}
+`cd /root/`{{execute}}
 
 `ll`{{execute}}
 
@@ -17,6 +17,8 @@
 <br>
 
 ## yaml
+
+`cd /root/09/`{{execute}}
 
 `ll`{{execute}}
 
@@ -36,9 +38,5 @@
 
 ## delete
 
-`kubectl delete -f 09_httpd-deployment.yaml`{{execute}}
-
-`kubectl delete -f 09_service.yaml`{{execute}}
-
-`kubectl delete -f 09_ingress.yaml`{{execute}}
+`kubectl delete -f .`{{execute}}
 
