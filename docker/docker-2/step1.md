@@ -26,11 +26,11 @@ https://hub.docker.com ★
 
 받은 이미지는 어디에 저장되는가?
 
-docker info | egrep 'Root|Storage'
+`docker info | egrep 'Root|Storage'`{{execute}}
 
 `ps -ef  | grep dockerd`{{execute}}
 
-ll /var/lib/docker/overlay/
+`ll /var/lib/docker/overlay/`{{execute}}
 
 
 ## 특정버전 받기
