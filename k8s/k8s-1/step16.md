@@ -26,7 +26,7 @@
 
 `env`{{execute}}
 
-`exit`{{execute}}
+`exit`
 
 <br>
 
