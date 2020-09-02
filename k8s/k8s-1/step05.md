@@ -2,7 +2,7 @@
 
 ## yaml
 
-`cd /root/05_ReplicaSet`{{execute}}
+`cd /root/05/`{{execute}}
 
 `ll`{{execute}}
 
