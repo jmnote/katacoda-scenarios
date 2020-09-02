@@ -2,7 +2,7 @@
 
 ## yaml
 
-`cd /root/04_sidecar`{{execute}}
+`cd /root/04/`{{execute}}
 
 `ll`{{execute}}
 
