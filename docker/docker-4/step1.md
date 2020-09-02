@@ -24,7 +24,7 @@
 
 ## -i vs -t
 
-`docker run -i ubuntu`{{execute}}
+`docker run -i alpine`{{execute}}
 
 `whoami`{{execute}}
 
@@ -32,7 +32,7 @@
 
 `exit`{{execute}}
 
-`docker run -t ubuntu`{{execute}}
+`docker run -t alpine`{{execute}}
 
 `whoami`{{execute}}
 
