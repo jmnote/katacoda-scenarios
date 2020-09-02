@@ -2,24 +2,34 @@
 
 ## yaml
 
-`cd /root/13/`{{execute}}
+`cd /root/16/`{{execute}}
 
 `ll`{{execute}}
 
-`cat deploy.yaml`{{execute}}
+`cat 16_secret.yaml`{{execute}}
 
-## deploy
+`cat 16_pod.yaml`{{execute}}
 
-`watch -n1 'kubectl get deploy,rs,pod'`{{execute}}
+<br>
 
-`kubectl apply -f deploy.yaml`{{execute}}
+## apply
 
-`kubectl delete pod POD이름`{{execute}}
+`kubectl apply -f .`{{execute}}
 
-## deploy
+`kubectl get secret`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml`{{execute}}
+`kubectl describe secret`{{execute}}
 
-`sed 's/go-httpd:v1/go-httpd:v2/g' deploy.yaml -i`{{execute}}
+`kubectl get pod`{{execute}}
 
-`kubectl apply -f deploy.yaml`{{execute}}
+`kubectl exec -it secret-env-pod -- bash`{{execute}}
+
+`env`{{execute}}
+
+`exit`{{execute}}
+
+<br>
+
+## delete
+
+`kubectl delete -f .`{{execute}}
