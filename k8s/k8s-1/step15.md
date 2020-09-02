@@ -12,7 +12,7 @@
 
 <br>
 
-## deploy 1 (error)
+## apply 1 (error)
 
 `kubectl apply -f 15-1_deployment.yaml`{{execute}}
 
@@ -26,7 +26,7 @@
 
 <br>
 
-## deploy 2
+## apply 2
 
 `kubectl apply -f 15-1_configmap.yaml`{{execute}}
 
@@ -54,7 +54,7 @@
 
 <br>
 
-## deploy 2
+## apply 3
 
 `kubectl apply -f .`{{execute}}
 
