@@ -14,7 +14,7 @@
 
 `kubectl apply -f 03_web1.yaml`{{execute}}
 
-`kubectl get pod web1 -w`{{execute}}
+`kubectl get pod web1`{{execute}}
 
 `kubectl exec -it web1 -- curl localhost`{{execute}}
 
