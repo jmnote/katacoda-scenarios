@@ -15,7 +15,7 @@ spec:
         app: httpd-deployment
     spec:
       containers:
-      - image: katacoda/docker-http-server:v4
+      - image: katacoda/docker-http-server:latest
         name: httpd-deployment
         ports:
         - containerPort: 80
