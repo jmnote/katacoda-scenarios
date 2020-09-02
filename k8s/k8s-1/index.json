@@ -72,6 +72,10 @@
       {
         "title": "k8s-17",
         "text": "step17.md"
+      },
+      {
+        "title": "k8s-18",
+        "text": "step18.md"
       }
     ],
     "intro": {
@@ -88,7 +92,6 @@
         {"target": "/root/06", "file": "06-2_httpd-deployment.yaml"},
         {"target": "/root/07", "file": "07_httpd-deployment.yaml"},
         {"target": "/root/07", "file": "07_service.yaml"},
-        {"target": "/root", "file": "07_service_2.yaml"},
         {"target": "/root/08", "file": "08_httpd-deployment.yaml"},
         {"target": "/root/08", "file": "08_nodeport.yaml"},
         {"target": "/root/08", "file": "08_nodeport2.yaml"},
@@ -112,7 +115,9 @@
         {"target": "/root/16", "file": "16_secret.yaml"},
         {"target": "/root", "file": "17_nfs-server-manaul.sh"},
         {"target": "/root/17", "file": "17_pod.yaml"},
-        {"target": "/root/17", "file": "17_pvc.yaml"}
+        {"target": "/root/17", "file": "17_pvc.yaml"},
+        {"target": "/root/18", "file": "18_deployment.yaml"},
+        {"target": "/root/18", "file": "18_service.yaml"}
       ]
     }
   },
