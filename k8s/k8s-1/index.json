@@ -115,10 +115,12 @@
         {"target": "/root/15", "file": "15-2_pod.yaml"},
         {"target": "/root/16", "file": "16_pod.yaml"},
         {"target": "/root/16", "file": "16_secret.yaml"},
-        {"target": "/root/17", "file": "17_contained-nfs-server.sh"},
-        {"target": "/root/17", "file": "17_pod.yaml"},
+        {"target": "/root/17", "file": "17_nfs-server.yaml"},
         {"target": "/root/17", "file": "17_pv.yaml"},
-        {"target": "/root/17", "file": "17_pvc.yaml"},
+        {"target": "/root/17", "file": "17_pvc-mysql.yaml"},
+        {"target": "/root/17", "file": "17_pvc-nginx.yaml"},
+        {"target": "/root/17", "file": "17_pod-mysql.yaml"},
+        {"target": "/root/17", "file": "17_pod-nginx.yaml"},
         {"target": "/root/18", "file": "18_deployment.yaml"},
         {"target": "/root/18", "file": "18_service.yaml"}
       ]
