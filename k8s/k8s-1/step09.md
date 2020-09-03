@@ -1,28 +1,18 @@
 <br>
 
-이 페이지는 시연 중심으로 진행합니다.
-
-* 이 ingress controller 설정에는 katacoda 환경 시연에 맞추어 변경한 부분이 있습니다.
-
-* node IP 변경 등 여건에 따라 ingress가 정상 작동하지 않을 수 있습니다.
-
-<br>
-
 ## ingress controller (admin)
 
-`cd /root/`{{execute}}
+`cd /root/09/`{{execute}}
 
 `ll`{{execute}}
+
+`cat 09_ingress-controller.sh`{{execute}}
+
+`sh 09_ingress-controller.sh`{{execute}}
 
 `cat 09_ingress-controller.yaml`{{execute}}
 
 `cat 09_ingress-controller.yaml | grep kind`{{execute}}
-
-`kubectl get node -owide`{{execute}}
-
-`cat 09_ingress-controller.yaml | tail -2`{{execute}}
-
-`nano 09_ingress-controller.yaml`{{execute}}
 
 `kubectl apply -f 09_ingress-controller.yaml`{{execute}}
 
@@ -33,8 +23,6 @@
 <br>
 
 ## yaml
-
-`cd /root/09/`{{execute}}
 
 `ll`{{execute}}
 
@@ -62,7 +50,11 @@
 
 `kubectl get node -owide`{{execute}}
 
-`curl -H "Host: my.kubernetes.example" 172.17.0.107
+`EXTERNAL_IP=$(hostname -I | cut -d' ' -f1)`{{execute}}
+
+`echo $EXTERNAL_IP`{{execute}}
+
+`curl -H "Host: my.kubernetes.example" $EXTERNAL_IP
 
 <br>
 
@@ -70,3 +62,4 @@
 
 `kubectl delete -f .`{{execute}}
 
+`kubectl delete pod curlpod`{{execute}}
