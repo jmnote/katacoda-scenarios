@@ -4,7 +4,7 @@
 
 <br>
 
-## nfs server
+## nfs server (admin)
 
 `cd /root/17/`{{execute}}
 
@@ -12,7 +12,7 @@
 
 <br>
 
-## pv
+## pv (admin)
 
 `cat 17_pv.yaml`{{execute}}
 
