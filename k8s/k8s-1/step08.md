@@ -36,11 +36,17 @@
 
 `kubectl get node -owide`{{execute}}
 
-`curl 마스터:포트`{{execute}}
+`ping controlplane`{{execute}}
 
-`curl 노드01:포트`{{execute}}
+`ping node01`{{execute}}
 
-`curl localhost:포트`{{execute}}
+`kubectl get service`{{execute}}
+
+`PORT=NodePort번호`{{execute}}
+
+`curl controlplane:$PORT`{{execute}}
+
+`curl node01:$PORT`{{execute}}
 
 <br>
 
@@ -52,18 +58,21 @@
 
 `kubectl apply -f 08_nodeport2.yaml`{{execute}}
 
-`kubectl get node -owide`{{execute}}
-
 `kubectl get service`{{execute}}
 
-`curl 마스터:32000`{{execute}}
+`kubectl exec -it curlpod -- curl httpd-nodeport-service`{{execute}}
 
-`curl 노드01:32000`{{execute}}
+`PORT=32000`{{execute}}
 
-`curl localhost:32000`{{execute}}
+`curl controlplane:$PORT`{{execute}}
+
+`curl node01:$PORT`{{execute}}
 
 <br>
 
 ## delete
 
 `kubectl delete -f .`{{execute}}
+
+`kubectl delete pod curlpod`{{execute}}
+
