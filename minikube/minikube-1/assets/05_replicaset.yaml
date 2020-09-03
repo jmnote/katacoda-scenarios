@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: httpd-replicaset
+  labels:
+    app: httpd-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: httpd-replicaset
+  template:
+    metadata:
+      labels:
+        app: httpd-replicaset
+    spec:
+      containers:
+      - image: ethos93/go-httpd:v1
+        imagePullPolicy: Always
+        name: httpd-replicaset
+        ports:
+        - containerPort: 80
+          protocol: TCP
