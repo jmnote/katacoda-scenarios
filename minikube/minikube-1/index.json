@@ -61,7 +61,7 @@
     "showdashboard": true,
     "dashboards": [{"name": "NodePort", "port": 32000}, {"name": "Ingress", "port": 80}],
     "terminals": [
-      {"name": "master", "target": "host01"},
+      {"name": "master", "target": "host01"}
     ]
   },
   "backend": {
