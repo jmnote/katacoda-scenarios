@@ -17,3 +17,4 @@
 * k8s-15 Volume
 * k8s-16 Job
 * k8s-17 CronJob
+* k8s-17 PersistentVolume
