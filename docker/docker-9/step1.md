@@ -18,7 +18,11 @@
 
 `docker exec -it mysql1 ps -ef`{{execute}}
 
+...
+
 `docker exec -it mysql1 bash`{{execute}}
+
+procps...
 
 <br>
 
