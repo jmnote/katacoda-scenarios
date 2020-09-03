@@ -59,3 +59,5 @@
 ## delete
 
 `kubectl delete -f .`{{execute}}
+
+`kubectl delete pod curlpod`{{execute}}
