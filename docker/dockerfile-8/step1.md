@@ -1,4 +1,3 @@
-`cd /root/07_SupervisorNginx
 
 <br>
 
