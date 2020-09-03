@@ -10,7 +10,11 @@
 
 `cat 10_deployment_v2.yaml`{{execute}}
 
+`diff 10_deployment_v1.yaml 10_deployment_v2.yaml`{{execute}}
+
 `cat 10_service.yaml`{{execute}}
+
+<br>
 
 ## deploy
 
@@ -19,6 +23,8 @@
 `kubectl apply -f 10_service.yaml`{{execute}}
 
 `kubectl get pod`{{execute}}
+
+`kubectl run curlpod --image=radial/busyboxplus:curl --generator=run-pod/v1 --command sleep 36000`{{execute}}
 
 `kubectl exec -it curlpod -- curl httpd-nodeport-service`{{execute}}
 
@@ -31,6 +37,8 @@
 `kubectl apply -f 10_deployment_v2.yaml`{{execute}}
 
 원래 탭 확인
+
+<br>
 
 ## rollout
 
