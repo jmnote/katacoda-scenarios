@@ -53,3 +53,9 @@
 `kubectl rollout undo deployment httpd-deployment --to-revision=1`{{execute}}
 
 원래 탭 확인
+
+<br>
+
+## delete
+
+`kubectl delete -f .`{{execute}}
