@@ -22,13 +22,13 @@
 
 `kubectl apply -f 10_service.yaml`{{execute}}
 
-`kubectl get pod`{{execute}}
+`kubectl get pod,service`{{execute}}
 
 `kubectl run curlpod --image=radial/busyboxplus:curl --generator=run-pod/v1 --command sleep 36000`{{execute}}
 
 `kubectl exec -it curlpod -- curl httpd-clusterip-service`{{execute}}
 
-`while sleep 0.5; do kubectl exec -it curlpod -- curl httpd-clusterip-service; done{{execute}}`{{execute}}
+`while sleep 0.5; do kubectl exec -it curlpod -- curl httpd-clusterip-service; done`{{execute}}
 
 다른 탭에서...
 
