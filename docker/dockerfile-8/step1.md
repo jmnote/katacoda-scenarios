@@ -9,6 +9,8 @@
 
 `docker run --rm -p 8080:8080 springio/gs-spring-boot-docker`{{execute}}
 
+다른 터미널에서...
+
 `curl localhost:8080`{{execute}}
 
 <br>
@@ -41,6 +43,8 @@ https://spring.io/guides/gs/spring-boot-docker/
 
 `java -jar build/libs/gs-spring-boot-docker-0.1.0.jar`{{execute}}
 
+다른 터미널에서...
+
 `curl localhost:8080`{{execute}}
 
 <br>
@@ -52,5 +56,7 @@ https://spring.io/guides/gs/spring-boot-docker/
 `docker images`{{execute}}
 
 `docker run --rm -p 8080:8080 myspring`{{execute}}
+
+다른 터미널에서...
 
 `curl localhost:8080`{{execute}}
