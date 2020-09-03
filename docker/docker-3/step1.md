@@ -15,7 +15,7 @@ Docker Hub의 이미지를 내 저장소에 업로드하기
 
 `docker images`{{execute}}
 
-`docker tag alpine:3.12.0 jmnote/myimage:333`{{execute}} ★ 출발지 → 목적지 (COPY?)
+`docker tag alpine:3.12.0 jmnote/myimage:333`{{execute}}
 
 `docker images`{{execute}}
 
