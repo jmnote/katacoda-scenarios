@@ -33,7 +33,7 @@ Terminal + `View HTTP port 80 on Host 1`
 
 <br>
 
-## link
+## link (중요도 낮음)
 
 `docker rm -f $(docker ps -aq)`{{execute}}
 
