@@ -54,7 +54,7 @@
 
 `echo $EXTERNAL_IP`{{execute}}
 
-`curl -H "Host: my.kubernetes.example" $EXTERNAL_IP
+`curl -H "Host: my.kubernetes.example" $EXTERNAL_IP`{{execute}}
 
 <br>
 
