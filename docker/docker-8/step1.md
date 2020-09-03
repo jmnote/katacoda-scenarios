@@ -14,6 +14,10 @@
 
 `SHOW TABLES;`{{execute}}
 
+`exit`
+
+`exit`
+
 `docker run -d --name wordpress1 -p 80:80 wordpress`{{execute}}
 
 `docker inspect mysql1 | grep IPAddress`{{execute}}
@@ -24,7 +28,8 @@ Terminal + `View HTTP port 80 on Host 1`
 
 `cat /etc/hosts`{{execute}}
 
-`exit`{{execute}}
+`exit`
+
 
 <br>
 
@@ -48,7 +53,7 @@ Terminal + `View HTTP port 80 on Host 1`
 
 `cat /etc/hosts`{{execute}}
 
-`exit`{{execute}}
+`exit`
 
 <br>
 
