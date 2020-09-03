@@ -1,6 +1,6 @@
 {
   "title": "Docker Training",
-  "description": "Docker Training with Katacoda v12.26",
+  "description": "Docker Training with Katacoda v0.12.26",
   "courses": [
     {
       "course_id":   "docker-1",
