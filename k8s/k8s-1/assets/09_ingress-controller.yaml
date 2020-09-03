@@ -88,4 +88,4 @@ spec:
   selector:
     app: nginx-ingress
   externalIPs:
-    - 172.17.0.107
+    - EXTERNAL_IP
