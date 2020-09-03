@@ -15,7 +15,7 @@ spec:
         app: httpd-deployment
     spec:
       containers:
-      - image: ethos93/go-httpd:v1
+      - image: ethos93/go-httpd:v2
         name: httpd-deployment
         ports:
         - containerPort: 80
