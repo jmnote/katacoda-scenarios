@@ -32,7 +32,7 @@
 
 `exit`{{execute}}
 
-`docker run -t alpine`{{execute}}
+`docker run -t alpine`
 
 `whoami`{{execute}}
 
