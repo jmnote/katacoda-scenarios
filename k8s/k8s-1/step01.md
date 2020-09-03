@@ -72,6 +72,10 @@
 
 `ip a`{{execute}}
 
+`hostname`{{execute}}
+
+`hostname -I`{{execute}}
+
 `kubectl get nodes -owide`{{execute}}
 
 `netstat -tnlp | grep apiserver`{{execute}}
