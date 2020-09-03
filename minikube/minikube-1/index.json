@@ -1,81 +1,13 @@
 {
-  "title": "k8s-all",
-  "description": "k8s-all",
+  "title": "minikube-1",
+  "description": "minikube-1",
   "difficulty": "Beginner",
   "time": "180 minutes",
   "details": {
     "steps": [
       {
-        "title": "k8s-01",
+        "title": "minikube-01",
         "text": "step01.md"
-      },
-      {
-        "title": "k8s-02",
-        "text": "step02.md"
-      },
-      {
-        "title": "k8s-03",
-        "text": "step03.md"
-      },
-      {
-        "title": "k8s-04",
-        "text": "step04.md"
-      },
-      {
-        "title": "k8s-05",
-        "text": "step05.md"
-      },
-      {
-        "title": "k8s-06",
-        "text": "step06.md"
-      },
-      {
-        "title": "k8s-07",
-        "text": "step07.md"
-      },
-      {
-        "title": "k8s-08",
-        "text": "step08.md"
-      },
-      {
-        "title": "k8s-09",
-        "text": "step09.md"
-      },
-      {
-        "title": "k8s-10",
-        "text": "step10.md"
-      },
-      {
-        "title": "k8s-11",
-        "text": "step11.md"
-      },
-      {
-        "title": "k8s-12",
-        "text": "step12.md"
-      },
-      {
-        "title": "k8s-13",
-        "text": "step13.md"
-      },
-      {
-        "title": "k8s-14",
-        "text": "step14.md"
-      },
-      {
-        "title": "k8s-15",
-        "text": "step15.md"
-      },
-      {
-        "title": "k8s-16",
-        "text": "step16.md"
-      },
-      {
-        "title": "k8s-17",
-        "text": "step17.md"
-      },
-      {
-        "title": "k8s-18",
-        "text": "step18.md"
       }
     ],
     "intro": {
