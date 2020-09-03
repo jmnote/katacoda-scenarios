@@ -16,7 +16,7 @@
 
 `cat 17_pv.yaml`{{execute}}
 
-`kubectl apply -f pv.yaml`{{execute}}
+`kubectl apply -f 17_pv.yaml`{{execute}}
 
 `kubectl get pv`{{execute}}
 
