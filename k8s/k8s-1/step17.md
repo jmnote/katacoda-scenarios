@@ -44,6 +44,24 @@
 
 `kubectl exec -it nginx -- curl localhost`{{execute}}
 
+`kubectl get pvc`{{execute}}
+
+`ll /exports/data-0001/`{{execute}}
+
+`echo hello pv > /exports/data-0001/index.html`{{execute}}
+
+<br>
+
+## pod 2
+
+`kubectl delete -f 17_pod-nginx.yaml`{{execute}}
+
+`kubectl apply -f 17_pod-nginx.yaml`{{execute}}
+
+`kubectl get pod`{{execute}}
+
+`kubectl exec -it nginx -- curl localhost`{{execute}}
+
 <br>
 
 ## delete
